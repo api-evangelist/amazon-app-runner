@@ -1,0 +1,179 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "apprunner": "https://docs.aws.amazon.com/apprunner/latest/api/",
+    "aws": "https://aws.amazon.com/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
+    "Service": {
+      "@id": "apprunner:API_Service",
+      "@context": {
+        "ServiceName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "ServiceId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "ServiceArn": {
+          "@id": "apprunner:ServiceArn",
+          "@type": "xsd:string"
+        },
+        "ServiceUrl": {
+          "@id": "schema:url",
+          "@type": "xsd:string"
+        },
+        "Status": {
+          "@id": "apprunner:ServiceStatus",
+          "@type": "xsd:string"
+        },
+        "SourceConfiguration": {
+          "@id": "apprunner:SourceConfiguration",
+          "@type": "apprunner:SourceConfiguration"
+        },
+        "InstanceConfiguration": {
+          "@id": "apprunner:InstanceConfiguration",
+          "@type": "apprunner:InstanceConfiguration"
+        },
+        "CreatedAt": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "UpdatedAt": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "SourceConfiguration": {
+      "@id": "apprunner:SourceConfiguration",
+      "@context": {
+        "CodeRepository": {
+          "@id": "apprunner:CodeRepository",
+          "@type": "apprunner:CodeRepository"
+        },
+        "ImageRepository": {
+          "@id": "apprunner:ImageRepository",
+          "@type": "apprunner:ImageRepository"
+        },
+        "AutoDeploymentsEnabled": {
+          "@id": "apprunner:AutoDeploymentsEnabled",
+          "@type": "xsd:boolean"
+        },
+        "AuthenticationConfiguration": {
+          "@id": "apprunner:AuthenticationConfiguration",
+          "@type": "apprunner:AuthenticationConfiguration"
+        }
+      }
+    },
+
+    "InstanceConfiguration": {
+      "@id": "apprunner:InstanceConfiguration",
+      "@context": {
+        "Cpu": {
+          "@id": "apprunner:Cpu",
+          "@type": "xsd:string"
+        },
+        "Memory": {
+          "@id": "apprunner:Memory",
+          "@type": "xsd:string"
+        },
+        "InstanceRoleArn": {
+          "@id": "apprunner:InstanceRoleArn",
+          "@type": "xsd:string"
+        }
+      }
+    },
+
+    "AutoScalingConfiguration": {
+      "@id": "apprunner:API_AutoScalingConfiguration",
+      "@context": {
+        "AutoScalingConfigurationArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "AutoScalingConfigurationName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "MaxConcurrency": {
+          "@id": "apprunner:MaxConcurrency",
+          "@type": "xsd:integer"
+        },
+        "MinSize": {
+          "@id": "apprunner:MinSize",
+          "@type": "xsd:integer"
+        },
+        "MaxSize": {
+          "@id": "apprunner:MaxSize",
+          "@type": "xsd:integer"
+        },
+        "CreatedAt": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "Status": {
+          "@id": "apprunner:AutoScalingConfigurationStatus",
+          "@type": "xsd:string"
+        }
+      }
+    },
+
+    "VpcConnector": {
+      "@id": "apprunner:API_VpcConnector",
+      "@context": {
+        "VpcConnectorArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "VpcConnectorName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "Subnets": {
+          "@id": "apprunner:Subnets",
+          "@container": "@list"
+        },
+        "SecurityGroups": {
+          "@id": "apprunner:SecurityGroups",
+          "@container": "@list"
+        },
+        "Status": {
+          "@id": "apprunner:VpcConnectorStatus",
+          "@type": "xsd:string"
+        },
+        "CreatedAt": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "CustomDomain": {
+      "@id": "apprunner:API_CustomDomain",
+      "@context": {
+        "DomainName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "EnableWWWSubdomain": {
+          "@id": "apprunner:EnableWWWSubdomain",
+          "@type": "xsd:boolean"
+        },
+        "Status": {
+          "@id": "apprunner:CustomDomainStatus",
+          "@type": "xsd:string"
+        },
+        "CertificateValidationRecords": {
+          "@id": "apprunner:CertificateValidationRecords",
+          "@container": "@list"
+        }
+      }
+    }
+  }
+}

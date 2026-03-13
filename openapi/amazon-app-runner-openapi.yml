@@ -1,0 +1,110 @@
+openapi: 3.1.0
+info:
+  title: AWS App Runner API
+  description: >-
+    The AWS App Runner API enables programmatic management of App Runner
+    services, auto scaling configurations, custom domains, VPC connectors,
+    VPC ingress connections, and observability configurations for
+    containerized web applications and APIs.
+  version: '2020-05-15'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+  - url: https://apprunner.{region}.amazonaws.com
+    description: AWS App Runner regional endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-2
+          - eu-west-1
+          - ap-northeast-1
+          - ap-southeast-2
+security:
+  - sigv4: []
+tags:
+  - name: Services
+    description: Operations for managing App Runner services
+  - name: Auto Scaling
+    description: Operations for managing auto scaling configurations
+  - name: Custom Domains
+    description: Operations for managing custom domain associations
+  - name: VPC Connectors
+    description: Operations for managing VPC connectors
+  - name: Observability
+    description: Operations for managing observability configurations
+paths:
+  /:
+    post:
+      operationId: CreateService
+      summary: Create an App Runner service
+      description: Creates an App Runner service from a source code repository or container image.
+      tags:
+        - Services
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateServiceInput'
+      responses:
+        '200':
+          description: Service created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateServiceOutput'
+        '400':
+          description: Invalid request
+        '500':
+          description: Internal server error
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+  schemas:
+    CreateServiceInput:
+      type: object
+      required:
+        - ServiceName
+        - SourceConfiguration
+      properties:
+        ServiceName:
+          type: string
+          description: The name of the App Runner service
+        SourceConfiguration:
+          type: object
+          description: The source configuration for the service
+        InstanceConfiguration:
+          type: object
+          description: Instance configuration (CPU, memory)
+        AutoScalingConfigurationArn:
+          type: string
+        HealthCheckConfiguration:
+          type: object
+    CreateServiceOutput:
+      type: object
+      properties:
+        Service:
+          type: object
+          properties:
+            ServiceName:
+              type: string
+            ServiceArn:
+              type: string
+            Status:
+              type: string
+        OperationId:
+          type: string
