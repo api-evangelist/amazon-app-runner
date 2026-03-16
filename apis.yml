@@ -1,14 +1,17 @@
+aid: amazon-app-runner
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-app-runner/refs/heads/main/apis.yml
 name: Amazon App Runner
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+specificationVersion: '0.19'
 description: >-
   AWS App Runner is a fully managed container application service that lets
   you build, deploy, and run containerized web applications and API services
   without prior infrastructure or container experience. Start with your
   source code or a container image.
-image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-url: https://aws.amazon.com/apprunner/
-type: Index
 created: '2024-01-15'
-modified: '2026-03-13'
+modified: '2026-03-16'
 tags:
 - Containers
 - Web Applications
