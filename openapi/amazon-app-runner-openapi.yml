@@ -48,8 +48,7 @@ paths:
       operationId: CreateService
       summary: Amazon App Runner Create an App Runner service
       description: Creates an App Runner service from a source code repository or container image.
-      tags:
-        - Services
+      tags: []
       requestBody:
         required: true
         content:
