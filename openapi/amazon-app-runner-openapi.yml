@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: AWS App Runner API
+  title: Amazon App Runner AWS App Runner API
   description: >-
     The AWS App Runner API enables programmatic management of App Runner
     services, auto scaling configurations, custom domains, VPC connectors,
@@ -46,7 +46,7 @@ paths:
   /:
     post:
       operationId: CreateService
-      summary: Create an App Runner service
+      summary: Amazon App Runner Create an App Runner service
       description: Creates an App Runner service from a source code repository or container image.
       tags:
         - Services
