@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListTagsForResourceResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "Tags",
+      "type": "string"
+    }
+  ]
+}

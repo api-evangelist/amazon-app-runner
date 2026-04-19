@@ -1,0 +1,6 @@
+{
+  "AutoScalingConfigurationName": "example-AutoScalingConfigurationName",
+  "LatestOnly": "example-LatestOnly",
+  "MaxResults": "example-MaxResults",
+  "NextToken": "example-NextToken"
+}

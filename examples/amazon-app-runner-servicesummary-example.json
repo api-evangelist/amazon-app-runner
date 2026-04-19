@@ -1,0 +1,9 @@
+{
+  "ServiceName": "example-ServiceName",
+  "ServiceId": "example-ServiceId",
+  "ServiceArn": "example-ServiceArn",
+  "ServiceUrl": "example-ServiceUrl",
+  "CreatedAt": "example-CreatedAt",
+  "UpdatedAt": "example-UpdatedAt",
+  "Status": "example-Status"
+}

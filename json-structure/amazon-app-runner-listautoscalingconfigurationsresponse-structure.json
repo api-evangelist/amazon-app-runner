@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListAutoScalingConfigurationsResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "AutoScalingConfigurationSummaryList",
+      "type": "string"
+    },
+    {
+      "name": "NextToken",
+      "type": "string"
+    }
+  ]
+}

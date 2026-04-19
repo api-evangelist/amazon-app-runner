@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UpdateServiceRequest",
+  "type": "object",
+  "properties": {
+    "ServiceArn": {},
+    "SourceConfiguration": {},
+    "InstanceConfiguration": {},
+    "AutoScalingConfigurationArn": {},
+    "HealthCheckConfiguration": {},
+    "NetworkConfiguration": {},
+    "ObservabilityConfiguration": {}
+  },
+  "required": [
+    "ServiceArn"
+  ]
+}

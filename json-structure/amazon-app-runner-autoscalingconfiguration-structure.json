@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "AutoScalingConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "AutoScalingConfigurationArn",
+      "type": "string"
+    },
+    {
+      "name": "AutoScalingConfigurationName",
+      "type": "string"
+    },
+    {
+      "name": "AutoScalingConfigurationRevision",
+      "type": "string"
+    },
+    {
+      "name": "Latest",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "MaxConcurrency",
+      "type": "string"
+    },
+    {
+      "name": "MinSize",
+      "type": "string"
+    },
+    {
+      "name": "MaxSize",
+      "type": "string"
+    },
+    {
+      "name": "CreatedAt",
+      "type": "string"
+    },
+    {
+      "name": "DeletedAt",
+      "type": "string"
+    }
+  ]
+}

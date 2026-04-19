@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CertificateValidationRecord",
+  "description": "Describes a certificate CNAME record to add to your DNS. For more information, see <a href=\"https://docs.aws.amazon.com/apprunner/latest/api/API_AssociateCustomDomain.html\">AssociateCustomDomain</a>.",
+  "type": "object",
+  "properties": {
+    "Name": {},
+    "Type": {},
+    "Value": {},
+    "Status": {}
+  }
+}

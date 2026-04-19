@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "DeleteObservabilityConfigurationRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ObservabilityConfigurationArn",
+      "type": "string"
+    }
+  ]
+}

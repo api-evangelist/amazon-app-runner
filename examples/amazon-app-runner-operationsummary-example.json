@@ -1,0 +1,9 @@
+{
+  "Id": "example-Id",
+  "Type": "example-Type",
+  "Status": "example-Status",
+  "TargetArn": "example-TargetArn",
+  "StartedAt": "example-StartedAt",
+  "EndedAt": "example-EndedAt",
+  "UpdatedAt": "example-UpdatedAt"
+}

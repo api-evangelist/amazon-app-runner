@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListServicesRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "NextToken",
+      "type": "string"
+    },
+    {
+      "name": "MaxResults",
+      "type": "string"
+    }
+  ]
+}

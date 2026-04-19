@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "EgressConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "EgressType",
+      "type": "string"
+    },
+    {
+      "name": "VpcConnectorArn",
+      "type": "string"
+    }
+  ]
+}

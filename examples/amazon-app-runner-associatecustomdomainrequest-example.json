@@ -1,0 +1,5 @@
+{
+  "ServiceArn": "example-ServiceArn",
+  "DomainName": "example-DomainName",
+  "EnableWWWSubdomain": "example-EnableWWWSubdomain"
+}

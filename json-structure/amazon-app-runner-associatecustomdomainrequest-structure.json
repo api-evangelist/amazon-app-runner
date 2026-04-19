@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "AssociateCustomDomainRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "DomainName",
+      "type": "string"
+    },
+    {
+      "name": "EnableWWWSubdomain",
+      "type": "string"
+    }
+  ]
+}

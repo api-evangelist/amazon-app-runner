@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "NetworkConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "EgressConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "IngressConfiguration",
+      "type": "string"
+    }
+  ]
+}

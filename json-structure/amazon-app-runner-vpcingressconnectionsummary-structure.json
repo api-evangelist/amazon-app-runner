@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "VpcIngressConnectionSummary",
+  "type": "record",
+  "fields": [
+    {
+      "name": "VpcIngressConnectionArn",
+      "type": "string"
+    },
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    }
+  ]
+}

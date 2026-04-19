@@ -1,0 +1,10 @@
+{
+  "ObservabilityConfigurationArn": "example-ObservabilityConfigurationArn",
+  "ObservabilityConfigurationName": "example-ObservabilityConfigurationName",
+  "TraceConfiguration": "example-TraceConfiguration",
+  "ObservabilityConfigurationRevision": "example-ObservabilityConfigurationRevision",
+  "Latest": "example-Latest",
+  "Status": "example-Status",
+  "CreatedAt": "example-CreatedAt",
+  "DeletedAt": "example-DeletedAt"
+}

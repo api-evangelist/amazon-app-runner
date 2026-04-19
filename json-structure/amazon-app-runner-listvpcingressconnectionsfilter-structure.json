@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListVpcIngressConnectionsFilter",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "VpcEndpointId",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ImageConfiguration",
+  "description": "Describes the configuration that App Runner uses to run an App Runner service using an image pulled from a source image repository.",
+  "type": "object",
+  "properties": {
+    "RuntimeEnvironmentVariables": {},
+    "StartCommand": {},
+    "Port": {},
+    "RuntimeEnvironmentSecrets": {}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CreateConnectionRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ConnectionName",
+      "type": "string"
+    },
+    {
+      "name": "ProviderType",
+      "type": "string"
+    },
+    {
+      "name": "Tags",
+      "type": "string"
+    }
+  ]
+}

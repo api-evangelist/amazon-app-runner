@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "OperationSummary",
+  "type": "record",
+  "fields": [
+    {
+      "name": "Id",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "TargetArn",
+      "type": "string"
+    },
+    {
+      "name": "StartedAt",
+      "type": "string"
+    },
+    {
+      "name": "EndedAt",
+      "type": "string"
+    },
+    {
+      "name": "UpdatedAt",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "ConnectionName": "example-ConnectionName",
+  "ConnectionArn": "example-ConnectionArn",
+  "ProviderType": "example-ProviderType",
+  "Status": "example-Status",
+  "CreatedAt": "example-CreatedAt"
+}

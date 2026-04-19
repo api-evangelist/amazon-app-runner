@@ -1,0 +1,10 @@
+{
+  "VpcConnectorName": "example-VpcConnectorName",
+  "VpcConnectorArn": "example-VpcConnectorArn",
+  "VpcConnectorRevision": "example-VpcConnectorRevision",
+  "Subnets": "example-Subnets",
+  "SecurityGroups": "example-SecurityGroups",
+  "Status": "example-Status",
+  "CreatedAt": "example-CreatedAt",
+  "DeletedAt": "example-DeletedAt"
+}

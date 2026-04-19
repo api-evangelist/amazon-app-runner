@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "UpdateServiceRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "SourceConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "InstanceConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "AutoScalingConfigurationArn",
+      "type": "string"
+    },
+    {
+      "name": "HealthCheckConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "NetworkConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "ObservabilityConfiguration",
+      "type": "string"
+    }
+  ]
+}

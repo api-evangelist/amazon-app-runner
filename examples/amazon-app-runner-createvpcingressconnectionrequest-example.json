@@ -1,0 +1,6 @@
+{
+  "ServiceArn": "example-ServiceArn",
+  "VpcIngressConnectionName": "example-VpcIngressConnectionName",
+  "IngressVpcConfiguration": "example-IngressVpcConfiguration",
+  "Tags": "example-Tags"
+}

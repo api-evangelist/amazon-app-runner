@@ -1,0 +1,5 @@
+{
+  "AutoScalingConfigurationArn": "example-AutoScalingConfigurationArn",
+  "AutoScalingConfigurationName": "example-AutoScalingConfigurationName",
+  "AutoScalingConfigurationRevision": "example-AutoScalingConfigurationRevision"
+}

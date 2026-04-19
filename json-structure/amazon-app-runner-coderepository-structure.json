@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CodeRepository",
+  "type": "record",
+  "fields": [
+    {
+      "name": "RepositoryUrl",
+      "type": "string"
+    },
+    {
+      "name": "SourceCodeVersion",
+      "type": "string"
+    },
+    {
+      "name": "CodeConfiguration",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "DescribeVpcConnectorRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "VpcConnectorArn",
+      "type": "string"
+    }
+  ]
+}

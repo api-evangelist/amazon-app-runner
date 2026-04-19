@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ObservabilityConfigurationSummary",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ObservabilityConfigurationArn",
+      "type": "string"
+    },
+    {
+      "name": "ObservabilityConfigurationName",
+      "type": "string"
+    },
+    {
+      "name": "ObservabilityConfigurationRevision",
+      "type": "string"
+    }
+  ]
+}

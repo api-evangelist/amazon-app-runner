@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConnectionSummary",
+  "description": "Provides summary information about an App Runner connection resource.",
+  "type": "object",
+  "properties": {
+    "ConnectionName": {},
+    "ConnectionArn": {},
+    "ProviderType": {},
+    "Status": {},
+    "CreatedAt": {}
+  }
+}

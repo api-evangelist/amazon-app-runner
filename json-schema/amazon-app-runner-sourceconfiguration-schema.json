@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SourceConfiguration",
+  "description": "Describes the source deployed to an App Runner service. It can be a code or an image repository.",
+  "type": "object",
+  "properties": {
+    "CodeRepository": {},
+    "ImageRepository": {},
+    "AutoDeploymentsEnabled": {},
+    "AuthenticationConfiguration": {}
+  }
+}

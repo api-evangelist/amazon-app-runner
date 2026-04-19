@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ServiceObservabilityConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ObservabilityEnabled",
+      "type": "string"
+    },
+    {
+      "name": "ObservabilityConfigurationArn",
+      "type": "string"
+    }
+  ]
+}

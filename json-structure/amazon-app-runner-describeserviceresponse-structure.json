@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "DescribeServiceResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "Service",
+      "type": "string"
+    }
+  ]
+}

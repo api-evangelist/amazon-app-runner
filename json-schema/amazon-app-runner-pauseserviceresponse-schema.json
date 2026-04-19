@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PauseServiceResponse",
+  "type": "object",
+  "properties": {
+    "Service": {},
+    "OperationId": {}
+  },
+  "required": [
+    "Service"
+  ]
+}

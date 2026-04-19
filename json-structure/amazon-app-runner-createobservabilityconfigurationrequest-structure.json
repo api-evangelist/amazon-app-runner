@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CreateObservabilityConfigurationRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ObservabilityConfigurationName",
+      "type": "string"
+    },
+    {
+      "name": "TraceConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "Tags",
+      "type": "string"
+    }
+  ]
+}

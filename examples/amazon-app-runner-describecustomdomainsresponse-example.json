@@ -1,0 +1,7 @@
+{
+  "DNSTarget": "example-DNSTarget",
+  "ServiceArn": "example-ServiceArn",
+  "CustomDomains": "example-CustomDomains",
+  "VpcDNSTargets": "example-VpcDNSTargets",
+  "NextToken": "example-NextToken"
+}

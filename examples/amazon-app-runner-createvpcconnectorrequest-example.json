@@ -1,0 +1,6 @@
+{
+  "VpcConnectorName": "example-VpcConnectorName",
+  "Subnets": "example-Subnets",
+  "SecurityGroups": "example-SecurityGroups",
+  "Tags": "example-Tags"
+}

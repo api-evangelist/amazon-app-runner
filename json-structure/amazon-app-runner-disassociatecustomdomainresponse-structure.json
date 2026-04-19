@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "DisassociateCustomDomainResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "DNSTarget",
+      "type": "string"
+    },
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "CustomDomain",
+      "type": "string"
+    },
+    {
+      "name": "VpcDNSTargets",
+      "type": "string"
+    }
+  ]
+}

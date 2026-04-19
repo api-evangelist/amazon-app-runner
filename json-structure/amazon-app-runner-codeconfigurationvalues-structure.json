@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CodeConfigurationValues",
+  "type": "record",
+  "fields": [
+    {
+      "name": "Runtime",
+      "type": "string"
+    },
+    {
+      "name": "BuildCommand",
+      "type": "string"
+    },
+    {
+      "name": "StartCommand",
+      "type": "string"
+    },
+    {
+      "name": "Port",
+      "type": "string"
+    },
+    {
+      "name": "RuntimeEnvironmentVariables",
+      "type": "string"
+    },
+    {
+      "name": "RuntimeEnvironmentSecrets",
+      "type": "string"
+    }
+  ]
+}

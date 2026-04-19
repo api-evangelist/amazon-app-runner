@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ServiceObservabilityConfiguration",
+  "description": "Describes the observability configuration of an App Runner service. These are additional observability features, like tracing, that you choose to enable. They're configured in a separate resource that you associate with your service.",
+  "type": "object",
+  "properties": {
+    "ObservabilityEnabled": {},
+    "ObservabilityConfigurationArn": {}
+  },
+  "required": [
+    "ObservabilityEnabled"
+  ]
+}

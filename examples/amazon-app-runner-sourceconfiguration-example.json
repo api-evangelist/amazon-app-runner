@@ -1,0 +1,6 @@
+{
+  "CodeRepository": "example-CodeRepository",
+  "ImageRepository": "example-ImageRepository",
+  "AutoDeploymentsEnabled": "example-AutoDeploymentsEnabled",
+  "AuthenticationConfiguration": "example-AuthenticationConfiguration"
+}

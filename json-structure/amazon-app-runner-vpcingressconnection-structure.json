@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "VpcIngressConnection",
+  "type": "record",
+  "fields": [
+    {
+      "name": "VpcIngressConnectionArn",
+      "type": "string"
+    },
+    {
+      "name": "VpcIngressConnectionName",
+      "type": "string"
+    },
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "AccountId",
+      "type": "string"
+    },
+    {
+      "name": "DomainName",
+      "type": "string"
+    },
+    {
+      "name": "IngressVpcConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "CreatedAt",
+      "type": "string"
+    },
+    {
+      "name": "DeletedAt",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ImageRepository",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ImageIdentifier",
+      "type": "string"
+    },
+    {
+      "name": "ImageConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "ImageRepositoryType",
+      "type": "string"
+    }
+  ]
+}

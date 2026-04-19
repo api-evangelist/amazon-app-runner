@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CreateVpcIngressConnectionRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "VpcIngressConnectionName",
+      "type": "string"
+    },
+    {
+      "name": "IngressVpcConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "Tags",
+      "type": "string"
+    }
+  ]
+}

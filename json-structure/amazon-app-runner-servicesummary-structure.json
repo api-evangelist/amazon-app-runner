@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ServiceSummary",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ServiceName",
+      "type": "string"
+    },
+    {
+      "name": "ServiceId",
+      "type": "string"
+    },
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "ServiceUrl",
+      "type": "string"
+    },
+    {
+      "name": "CreatedAt",
+      "type": "string"
+    },
+    {
+      "name": "UpdatedAt",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    }
+  ]
+}

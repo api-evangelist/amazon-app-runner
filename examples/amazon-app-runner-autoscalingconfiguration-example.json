@@ -1,0 +1,12 @@
+{
+  "AutoScalingConfigurationArn": "example-AutoScalingConfigurationArn",
+  "AutoScalingConfigurationName": "example-AutoScalingConfigurationName",
+  "AutoScalingConfigurationRevision": "example-AutoScalingConfigurationRevision",
+  "Latest": "example-Latest",
+  "Status": "example-Status",
+  "MaxConcurrency": "example-MaxConcurrency",
+  "MinSize": "example-MinSize",
+  "MaxSize": "example-MaxSize",
+  "CreatedAt": "example-CreatedAt",
+  "DeletedAt": "example-DeletedAt"
+}

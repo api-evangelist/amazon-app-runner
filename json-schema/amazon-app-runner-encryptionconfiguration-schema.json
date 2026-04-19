@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EncryptionConfiguration",
+  "description": "Describes a custom encryption key that App Runner uses to encrypt copies of the source repository and service logs.",
+  "type": "object",
+  "properties": {
+    "KmsKey": {}
+  },
+  "required": [
+    "KmsKey"
+  ]
+}

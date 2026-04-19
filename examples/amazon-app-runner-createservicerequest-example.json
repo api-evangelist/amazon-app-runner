@@ -1,0 +1,11 @@
+{
+  "ServiceName": "example-ServiceName",
+  "SourceConfiguration": "example-SourceConfiguration",
+  "InstanceConfiguration": "example-InstanceConfiguration",
+  "Tags": "example-Tags",
+  "EncryptionConfiguration": "example-EncryptionConfiguration",
+  "HealthCheckConfiguration": "example-HealthCheckConfiguration",
+  "AutoScalingConfigurationArn": "example-AutoScalingConfigurationArn",
+  "NetworkConfiguration": "example-NetworkConfiguration",
+  "ObservabilityConfiguration": "example-ObservabilityConfiguration"
+}

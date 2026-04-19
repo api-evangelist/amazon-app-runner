@@ -1,0 +1,11 @@
+{
+  "VpcIngressConnectionArn": "example-VpcIngressConnectionArn",
+  "VpcIngressConnectionName": "example-VpcIngressConnectionName",
+  "ServiceArn": "example-ServiceArn",
+  "Status": "example-Status",
+  "AccountId": "example-AccountId",
+  "DomainName": "example-DomainName",
+  "IngressVpcConfiguration": "example-IngressVpcConfiguration",
+  "CreatedAt": "example-CreatedAt",
+  "DeletedAt": "example-DeletedAt"
+}

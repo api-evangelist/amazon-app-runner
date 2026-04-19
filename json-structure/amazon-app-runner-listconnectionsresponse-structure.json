@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListConnectionsResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ConnectionSummaryList",
+      "type": "string"
+    },
+    {
+      "name": "NextToken",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ImageConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "RuntimeEnvironmentVariables",
+      "type": "string"
+    },
+    {
+      "name": "StartCommand",
+      "type": "string"
+    },
+    {
+      "name": "Port",
+      "type": "string"
+    },
+    {
+      "name": "RuntimeEnvironmentSecrets",
+      "type": "string"
+    }
+  ]
+}

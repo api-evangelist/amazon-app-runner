@@ -1,0 +1,8 @@
+{
+  "Runtime": "example-Runtime",
+  "BuildCommand": "example-BuildCommand",
+  "StartCommand": "example-StartCommand",
+  "Port": "example-Port",
+  "RuntimeEnvironmentVariables": "example-RuntimeEnvironmentVariables",
+  "RuntimeEnvironmentSecrets": "example-RuntimeEnvironmentSecrets"
+}

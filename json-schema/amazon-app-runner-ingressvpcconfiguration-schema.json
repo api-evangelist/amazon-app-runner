@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IngressVpcConfiguration",
+  "description": "The configuration of your VPC and the associated VPC endpoint. The VPC endpoint is an Amazon Web Services PrivateLink resource that allows access to your App Runner services from within an Amazon VPC.",
+  "type": "object",
+  "properties": {
+    "VpcId": {},
+    "VpcEndpointId": {}
+  }
+}

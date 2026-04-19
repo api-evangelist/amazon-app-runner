@@ -1,0 +1,7 @@
+{
+  "AutoScalingConfigurationName": "example-AutoScalingConfigurationName",
+  "MaxConcurrency": "example-MaxConcurrency",
+  "MinSize": "example-MinSize",
+  "MaxSize": "example-MaxSize",
+  "Tags": "example-Tags"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CustomDomain",
+  "type": "record",
+  "fields": [
+    {
+      "name": "DomainName",
+      "type": "string"
+    },
+    {
+      "name": "EnableWWWSubdomain",
+      "type": "string"
+    },
+    {
+      "name": "CertificateValidationRecords",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    }
+  ]
+}

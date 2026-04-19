@@ -1,0 +1,4 @@
+{
+  "EgressConfiguration": "example-EgressConfiguration",
+  "IngressConfiguration": "example-IngressConfiguration"
+}

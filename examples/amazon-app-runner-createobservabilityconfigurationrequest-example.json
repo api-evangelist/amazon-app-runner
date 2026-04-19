@@ -1,0 +1,5 @@
+{
+  "ObservabilityConfigurationName": "example-ObservabilityConfigurationName",
+  "TraceConfiguration": "example-TraceConfiguration",
+  "Tags": "example-Tags"
+}

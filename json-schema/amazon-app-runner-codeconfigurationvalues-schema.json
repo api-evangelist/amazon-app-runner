@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodeConfigurationValues",
+  "description": "Describes the basic configuration needed for building and running an App Runner service. This type doesn't support the full set of possible configuration options. Fur full configuration capabilities, use a <code>apprunner.yaml</code> file in the source code repository.",
+  "type": "object",
+  "properties": {
+    "Runtime": {},
+    "BuildCommand": {},
+    "StartCommand": {},
+    "Port": {},
+    "RuntimeEnvironmentVariables": {},
+    "RuntimeEnvironmentSecrets": {}
+  },
+  "required": [
+    "Runtime"
+  ]
+}

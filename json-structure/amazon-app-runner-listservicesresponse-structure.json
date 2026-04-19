@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListServicesResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ServiceSummaryList",
+      "type": "string"
+    },
+    {
+      "name": "NextToken",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+extends:
+- - spectral:oas
+  - all
+rules:
+  amazon-app-runner-info-title:
+    description: API must have a title.
+    message: Info must include title.
+    severity: error
+    given: $.info
+    then:
+      field: title
+      function: truthy
+  amazon-app-runner-operation-summary:
+    description: Operations must have summaries.
+    message: Operation must include summary.
+    severity: error
+    given: $.paths[*][get,post,put,patch,delete]
+    then:
+      field: summary
+      function: truthy
+  amazon-app-runner-operation-id:
+    description: Operations must have operationIds.
+    message: Operation must include operationId.
+    severity: error
+    given: $.paths[*][get,post,put,patch,delete]
+    then:
+      field: operationId
+      function: truthy

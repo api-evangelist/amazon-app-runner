@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CustomDomain",
+  "description": "Describes a custom domain that's associated with an App Runner service.",
+  "type": "object",
+  "properties": {
+    "DomainName": {},
+    "EnableWWWSubdomain": {},
+    "CertificateValidationRecords": {},
+    "Status": {}
+  },
+  "required": [
+    "DomainName",
+    "EnableWWWSubdomain",
+    "Status"
+  ]
+}

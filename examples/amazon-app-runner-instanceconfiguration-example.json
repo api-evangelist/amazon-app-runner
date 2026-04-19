@@ -1,0 +1,5 @@
+{
+  "Cpu": "example-Cpu",
+  "Memory": "example-Memory",
+  "InstanceRoleArn": "example-InstanceRoleArn"
+}

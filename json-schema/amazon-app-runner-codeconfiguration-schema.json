@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodeConfiguration",
+  "description": "Describes the configuration that App Runner uses to build and run an App Runner service from a source code repository.",
+  "type": "object",
+  "properties": {
+    "ConfigurationSource": {},
+    "CodeConfigurationValues": {}
+  },
+  "required": [
+    "ConfigurationSource"
+  ]
+}

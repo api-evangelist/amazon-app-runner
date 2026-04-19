@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VpcConnector",
+  "description": "<p>Describes an App Runner VPC connector resource. A VPC connector describes the Amazon Virtual Private Cloud (Amazon VPC) that an App Runner service is associated with, and the subnets and security group that are used.</p> <p>Multiple revisions of a connector might have the same <code>Name</code> and different <code>Revision</code> values.</p> <note> <p>At this time, App Runner supports only one revision per name.</p> </note>",
+  "type": "object",
+  "properties": {
+    "VpcConnectorName": {},
+    "VpcConnectorArn": {},
+    "VpcConnectorRevision": {},
+    "Subnets": {},
+    "SecurityGroups": {},
+    "Status": {},
+    "CreatedAt": {},
+    "DeletedAt": {}
+  }
+}

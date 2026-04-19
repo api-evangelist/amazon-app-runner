@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "DescribeCustomDomainsResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "DNSTarget",
+      "type": "string"
+    },
+    {
+      "name": "ServiceArn",
+      "type": "string"
+    },
+    {
+      "name": "CustomDomains",
+      "type": "string"
+    },
+    {
+      "name": "VpcDNSTargets",
+      "type": "string"
+    },
+    {
+      "name": "NextToken",
+      "type": "string"
+    }
+  ]
+}

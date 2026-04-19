@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DisassociateCustomDomainRequest",
+  "type": "object",
+  "properties": {
+    "ServiceArn": {},
+    "DomainName": {}
+  },
+  "required": [
+    "ServiceArn",
+    "DomainName"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NetworkConfiguration",
+  "description": "Describes configuration settings related to network traffic of an App Runner service. Consists of embedded objects for each configurable network feature.",
+  "type": "object",
+  "properties": {
+    "EgressConfiguration": {},
+    "IngressConfiguration": {}
+  }
+}

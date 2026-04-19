@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AuthenticationConfiguration",
+  "description": "Describes resources needed to authenticate access to some source repositories. The specific resource depends on the repository provider.",
+  "type": "object",
+  "properties": {
+    "ConnectionArn": {},
+    "AccessRoleArn": {}
+  }
+}

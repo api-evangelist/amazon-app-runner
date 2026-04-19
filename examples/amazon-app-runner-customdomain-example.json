@@ -1,0 +1,6 @@
+{
+  "DomainName": "example-DomainName",
+  "EnableWWWSubdomain": "example-EnableWWWSubdomain",
+  "CertificateValidationRecords": "example-CertificateValidationRecords",
+  "Status": "example-Status"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CreateVpcConnectorRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "VpcConnectorName",
+      "type": "string"
+    },
+    {
+      "name": "Subnets",
+      "type": "string"
+    },
+    {
+      "name": "SecurityGroups",
+      "type": "string"
+    },
+    {
+      "name": "Tags",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "AuthenticationConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ConnectionArn",
+      "type": "string"
+    },
+    {
+      "name": "AccessRoleArn",
+      "type": "string"
+    }
+  ]
+}

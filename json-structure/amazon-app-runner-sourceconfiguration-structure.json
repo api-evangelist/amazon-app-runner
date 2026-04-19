@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "SourceConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "CodeRepository",
+      "type": "string"
+    },
+    {
+      "name": "ImageRepository",
+      "type": "string"
+    },
+    {
+      "name": "AutoDeploymentsEnabled",
+      "type": "string"
+    },
+    {
+      "name": "AuthenticationConfiguration",
+      "type": "string"
+    }
+  ]
+}

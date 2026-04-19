@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VpcIngressConnection",
+  "description": "The App Runner resource that specifies an App Runner endpoint for incoming traffic. It establishes a connection between a VPC interface endpoint and a App Runner service, to make your App Runner service accessible from only within an Amazon VPC.",
+  "type": "object",
+  "properties": {
+    "VpcIngressConnectionArn": {},
+    "VpcIngressConnectionName": {},
+    "ServiceArn": {},
+    "Status": {},
+    "AccountId": {},
+    "DomainName": {},
+    "IngressVpcConfiguration": {},
+    "CreatedAt": {},
+    "DeletedAt": {}
+  }
+}

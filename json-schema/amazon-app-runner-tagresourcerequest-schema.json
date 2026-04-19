@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TagResourceRequest",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {},
+    "Tags": {}
+  },
+  "required": [
+    "ResourceArn",
+    "Tags"
+  ]
+}

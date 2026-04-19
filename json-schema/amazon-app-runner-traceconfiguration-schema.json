@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TraceConfiguration",
+  "description": "Describes the configuration of the tracing feature within an App Runner observability configuration.",
+  "type": "object",
+  "properties": {
+    "Vendor": {}
+  },
+  "required": [
+    "Vendor"
+  ]
+}

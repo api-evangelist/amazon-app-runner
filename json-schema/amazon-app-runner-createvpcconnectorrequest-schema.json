@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreateVpcConnectorRequest",
+  "type": "object",
+  "properties": {
+    "VpcConnectorName": {},
+    "Subnets": {},
+    "SecurityGroups": {},
+    "Tags": {}
+  },
+  "required": [
+    "VpcConnectorName",
+    "Subnets"
+  ]
+}

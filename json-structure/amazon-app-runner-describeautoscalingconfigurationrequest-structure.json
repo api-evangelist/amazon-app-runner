@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "DescribeAutoScalingConfigurationRequest",
+  "type": "record",
+  "fields": [
+    {
+      "name": "AutoScalingConfigurationArn",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ObservabilityConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "ObservabilityConfigurationArn",
+      "type": "string"
+    },
+    {
+      "name": "ObservabilityConfigurationName",
+      "type": "string"
+    },
+    {
+      "name": "TraceConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "ObservabilityConfigurationRevision",
+      "type": "string"
+    },
+    {
+      "name": "Latest",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "CreatedAt",
+      "type": "string"
+    },
+    {
+      "name": "DeletedAt",
+      "type": "string"
+    }
+  ]
+}

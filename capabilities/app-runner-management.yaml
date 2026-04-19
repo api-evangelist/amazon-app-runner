@@ -1,0 +1,50 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: App Runner Management
+  description: Workflow for managing Amazon App Runner API resources.
+  tags:
+  - Amazon
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - import: amazon-app-runner
+    location: ./shared/amazon-app-runner.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: app-runner-management-api
+    resources:
+    - path: /v1/resources
+      name: resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List resources.
+        call: amazon-app-runner.list-resources
+        with: {}
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: app-runner-management-mcp
+    transport: http
+    tools:
+    - name: list-resources
+      description: List Amazon App Runner API resources.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-app-runner.list-resources
+      with: {}
+      outputParameters:
+      - type: object
+        mapping: $.

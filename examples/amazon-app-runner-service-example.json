@@ -1,0 +1,17 @@
+{
+  "ServiceName": "example-ServiceName",
+  "ServiceId": "example-ServiceId",
+  "ServiceArn": "example-ServiceArn",
+  "ServiceUrl": "example-ServiceUrl",
+  "CreatedAt": "example-CreatedAt",
+  "UpdatedAt": "example-UpdatedAt",
+  "DeletedAt": "example-DeletedAt",
+  "Status": "example-Status",
+  "SourceConfiguration": "example-SourceConfiguration",
+  "InstanceConfiguration": "example-InstanceConfiguration",
+  "EncryptionConfiguration": "example-EncryptionConfiguration",
+  "HealthCheckConfiguration": "example-HealthCheckConfiguration",
+  "AutoScalingConfigurationSummary": "example-AutoScalingConfigurationSummary",
+  "NetworkConfiguration": "example-NetworkConfiguration",
+  "ObservabilityConfiguration": "example-ObservabilityConfiguration"
+}

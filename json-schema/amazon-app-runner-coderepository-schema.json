@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodeRepository",
+  "description": "Describes a source code repository.",
+  "type": "object",
+  "properties": {
+    "RepositoryUrl": {},
+    "SourceCodeVersion": {},
+    "CodeConfiguration": {}
+  },
+  "required": [
+    "RepositoryUrl",
+    "SourceCodeVersion"
+  ]
+}

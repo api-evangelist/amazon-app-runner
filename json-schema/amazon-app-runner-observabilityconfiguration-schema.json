@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ObservabilityConfiguration",
+  "description": "<p>Describes an App Runner observability configuration resource. Multiple revisions of a configuration have the same <code>ObservabilityConfigurationName</code> and different <code>ObservabilityConfigurationRevision</code> values.</p> <p>The resource is designed to configure multiple features (currently one feature, tracing). This type contains optional members that describe the configuration of these features (currently one member, <code>TraceConfiguration</code>). If a feature member isn't specified, the feature isn't enabled.</p>",
+  "type": "object",
+  "properties": {
+    "ObservabilityConfigurationArn": {},
+    "ObservabilityConfigurationName": {},
+    "TraceConfiguration": {},
+    "ObservabilityConfigurationRevision": {},
+    "Latest": {},
+    "Status": {},
+    "CreatedAt": {},
+    "DeletedAt": {}
+  }
+}

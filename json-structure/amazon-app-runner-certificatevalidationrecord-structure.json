@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "CertificateValidationRecord",
+  "type": "record",
+  "fields": [
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Value",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    }
+  ]
+}

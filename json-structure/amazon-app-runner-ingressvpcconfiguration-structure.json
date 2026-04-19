@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "IngressVpcConfiguration",
+  "type": "record",
+  "fields": [
+    {
+      "name": "VpcId",
+      "type": "string"
+    },
+    {
+      "name": "VpcEndpointId",
+      "type": "string"
+    }
+  ]
+}

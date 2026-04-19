@@ -1,0 +1,8 @@
+{
+  "Protocol": "example-Protocol",
+  "Path": "example-Path",
+  "Interval": "example-Interval",
+  "Timeout": "example-Timeout",
+  "HealthyThreshold": "example-HealthyThreshold",
+  "UnhealthyThreshold": "example-UnhealthyThreshold"
+}

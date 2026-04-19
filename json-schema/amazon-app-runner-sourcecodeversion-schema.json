@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SourceCodeVersion",
+  "description": "Identifies a version of code that App Runner refers to within a source code repository.",
+  "type": "object",
+  "properties": {
+    "Type": {},
+    "Value": {}
+  },
+  "required": [
+    "Type",
+    "Value"
+  ]
+}

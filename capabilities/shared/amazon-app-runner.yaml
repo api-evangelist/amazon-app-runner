@@ -1,0 +1,69 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon App Runner API
+  description: Shared capability for Amazon App Runner API.
+  tags:
+  - Amazon
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-app-runner
+    baseUri: https://apprunner.amazonaws.com
+    description: Amazon App Runner API
+    authentication:
+      type: aws-sigv4
+      service: app-runner
+    resources:
+    - name: resources
+      path: /
+      description: Amazon App Runner API resources.
+      operations:
+      - name: list-resources
+        method: GET
+        description: List resources.
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8115
+    namespace: amazon-app-runner-api
+    resources:
+    - path: /v1/resources
+      name: resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List resources.
+        call: amazon-app-runner.list-resources
+        with: {}
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9115
+    namespace: amazon-app-runner-mcp
+    transport: http
+    tools:
+    - name: list-resources
+      description: List Amazon App Runner API resources.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-app-runner.list-resources
+      with: {}
+      outputParameters:
+      - type: object
+        mapping: $.

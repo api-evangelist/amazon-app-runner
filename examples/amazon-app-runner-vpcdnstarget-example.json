@@ -1,0 +1,5 @@
+{
+  "VpcIngressConnectionArn": "example-VpcIngressConnectionArn",
+  "VpcId": "example-VpcId",
+  "DomainName": "example-DomainName"
+}

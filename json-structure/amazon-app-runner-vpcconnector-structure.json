@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "VpcConnector",
+  "type": "record",
+  "fields": [
+    {
+      "name": "VpcConnectorName",
+      "type": "string"
+    },
+    {
+      "name": "VpcConnectorArn",
+      "type": "string"
+    },
+    {
+      "name": "VpcConnectorRevision",
+      "type": "string"
+    },
+    {
+      "name": "Subnets",
+      "type": "string"
+    },
+    {
+      "name": "SecurityGroups",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "CreatedAt",
+      "type": "string"
+    },
+    {
+      "name": "DeletedAt",
+      "type": "string"
+    }
+  ]
+}

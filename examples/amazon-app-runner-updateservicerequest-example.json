@@ -1,0 +1,9 @@
+{
+  "ServiceArn": "example-ServiceArn",
+  "SourceConfiguration": "example-SourceConfiguration",
+  "InstanceConfiguration": "example-InstanceConfiguration",
+  "AutoScalingConfigurationArn": "example-AutoScalingConfigurationArn",
+  "HealthCheckConfiguration": "example-HealthCheckConfiguration",
+  "NetworkConfiguration": "example-NetworkConfiguration",
+  "ObservabilityConfiguration": "example-ObservabilityConfiguration"
+}
