@@ -11,7 +11,7 @@ description: >-
   without prior infrastructure or container experience. Start with your
   source code or a container image.
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-06-20'
 tags:
 - AWS
 - CI/CD
@@ -72,7 +72,27 @@ apis:
     url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
   - type: JSONLD
     url: json-ld/amazon-app-runner-context.jsonld
+  - type: Overlay
+    url: overlays/amazon-app-runner-openapi-overlay.yaml
+  - type: MCPServer
+    url: mcp/amazon-app-runner-mcp.yml
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
 common:
+- type: Packages
+  url: packages/amazon-app-runner-packages.yml
+- type: WellKnown
+  url: well-known/amazon-app-runner-well-known.yml
+- type: SecurityTxt
+  url: well-known/amazon-app-runner-security.txt
+- type: LLMsTxt
+  url: llms/amazon-app-runner-llms.txt
+- type: LLMsTxt
+  url: llms/amazon-app-runner-llms-full.txt
+- type: Lifecycle
+  url: lifecycle/amazon-app-runner-lifecycle.yml
 - type: Portal
   url: https://console.aws.amazon.com/
 - type: Website

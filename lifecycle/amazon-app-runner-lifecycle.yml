@@ -1,0 +1,29 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  openapi/amazon-app-runner-openapi.yaml (info.version) plus AWS App Runner and
+  AWS general documentation for versioning, service level agreement, and status.
+versioning:
+  scheme: date-based-api-version
+  current: '2020-05-15'
+  docs: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  note: >-
+    App Runner uses the standard AWS dated API version (2020-05-15) carried in
+    the request; the SDKs pin this version. There is no URI-path v1/v2 scheme.
+deprecation:
+  policy_url: https://docs.aws.amazon.com/apprunner/latest/relnotes/
+  sunset_header: false
+  note: >-
+    App Runner announces feature and Region availability changes through the
+    Release Notes; the AWS JSON RPC protocol does not use RFC 8594 Sunset or
+    Deprecation response headers.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No dedicated AWS App Runner service level agreement page was found
+    (https://aws.amazon.com/apprunner/sla/ returned 404 on 2026-06-20). Refer to
+    the general AWS Service Terms for applicable commitments.
+status_page: https://health.aws.amazon.com/health/status
+support: https://aws.amazon.com/premiumsupport/
+deprecated_operations: []

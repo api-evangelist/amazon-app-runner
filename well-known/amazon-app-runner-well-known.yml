@@ -1,0 +1,22 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Probed /.well-known/ discovery surface on the App Runner regional service
+  host and the AWS corporate host. The App Runner API host requires SigV4 and
+  serves no discovery documents; the AWS corporate host publishes a security.txt.
+hosts:
+  - host: https://apprunner.us-east-1.amazonaws.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+  - host: https://aws.amazon.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: amazon-app-runner-security.txt
+      - path: /.well-known/ai-plugin.json
+        status: 301

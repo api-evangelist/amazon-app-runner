@@ -1,0 +1,31 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for AWS App Runner
+  version: 1.0.0
+extends: openapi/amazon-app-runner-openapi.yaml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-slug: amazon-app-runner
+      x-apievangelist-provider: Amazon Web Services
+      x-apievangelist-generated: '2026-06-20'
+      x-apievangelist-tags:
+        - AWS
+        - Containers
+        - Deployment
+        - Serverless
+        - Web Applications
+      x-apievangelist-docs: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+      x-apievangelist-pricing: https://aws.amazon.com/apprunner/pricing/
+  - target: $.info
+    update:
+      x-authentication: AWS Signature Version 4 (SigV4)
+      x-error-format: >-
+        AWS query/JSON RPC modeled exceptions (InvalidRequestException,
+        InvalidStateException, ResourceNotFoundException,
+        ServiceQuotaExceededException, InternalServiceErrorException); not
+        RFC 9457 problem+json.
+      x-pagination: token-based via NextToken and MaxResults
+  - target: $.externalDocs
+    update:
+      x-apievangelist-llms-txt: https://docs.aws.amazon.com/apprunner/latest/api/llms.txt

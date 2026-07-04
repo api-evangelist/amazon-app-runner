@@ -1,0 +1,85 @@
+# AWS App Runner API Reference
+
+> Get formal descriptions of all the API actions and data types for AWS App Runner. Find example requests, responses, and errors for the supported web service protocols.
+
+- [Welcome](https://docs.aws.amazon.com/apprunner/latest/api/Welcome.md)
+- [Common Parameters](https://docs.aws.amazon.com/apprunner/latest/api/CommonParameters.md)
+- [Common Error Types](https://docs.aws.amazon.com/apprunner/latest/api/CommonErrors.md)
+
+## [Actions](https://docs.aws.amazon.com/apprunner/latest/api/API_Operations.md)
+
+- [AssociateCustomDomain](https://docs.aws.amazon.com/apprunner/latest/api/API_AssociateCustomDomain.md)
+- [CreateAutoScalingConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateAutoScalingConfiguration.md)
+- [CreateConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateConnection.md)
+- [CreateObservabilityConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateObservabilityConfiguration.md)
+- [CreateService](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.md)
+- [CreateVpcConnector](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateVpcConnector.md)
+- [CreateVpcIngressConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateVpcIngressConnection.md)
+- [DeleteAutoScalingConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteAutoScalingConfiguration.md)
+- [DeleteConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteConnection.md)
+- [DeleteObservabilityConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteObservabilityConfiguration.md)
+- [DeleteService](https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteService.md)
+- [DeleteVpcConnector](https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteVpcConnector.md)
+- [DeleteVpcIngressConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteVpcIngressConnection.md)
+- [DescribeAutoScalingConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeAutoScalingConfiguration.md)
+- [DescribeCustomDomains](https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeCustomDomains.md)
+- [DescribeObservabilityConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeObservabilityConfiguration.md)
+- [DescribeService](https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeService.md)
+- [DescribeVpcConnector](https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeVpcConnector.md)
+- [DescribeVpcIngressConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeVpcIngressConnection.md)
+- [DisassociateCustomDomain](https://docs.aws.amazon.com/apprunner/latest/api/API_DisassociateCustomDomain.md)
+- [ListAutoScalingConfigurations](https://docs.aws.amazon.com/apprunner/latest/api/API_ListAutoScalingConfigurations.md)
+- [ListConnections](https://docs.aws.amazon.com/apprunner/latest/api/API_ListConnections.md)
+- [ListObservabilityConfigurations](https://docs.aws.amazon.com/apprunner/latest/api/API_ListObservabilityConfigurations.md)
+- [ListOperations](https://docs.aws.amazon.com/apprunner/latest/api/API_ListOperations.md)
+- [ListServices](https://docs.aws.amazon.com/apprunner/latest/api/API_ListServices.md)
+- [ListServicesForAutoScalingConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_ListServicesForAutoScalingConfiguration.md)
+- [ListTagsForResource](https://docs.aws.amazon.com/apprunner/latest/api/API_ListTagsForResource.md)
+- [ListVpcConnectors](https://docs.aws.amazon.com/apprunner/latest/api/API_ListVpcConnectors.md)
+- [ListVpcIngressConnections](https://docs.aws.amazon.com/apprunner/latest/api/API_ListVpcIngressConnections.md)
+- [PauseService](https://docs.aws.amazon.com/apprunner/latest/api/API_PauseService.md)
+- [ResumeService](https://docs.aws.amazon.com/apprunner/latest/api/API_ResumeService.md)
+- [StartDeployment](https://docs.aws.amazon.com/apprunner/latest/api/API_StartDeployment.md)
+- [TagResource](https://docs.aws.amazon.com/apprunner/latest/api/API_TagResource.md)
+- [UntagResource](https://docs.aws.amazon.com/apprunner/latest/api/API_UntagResource.md)
+- [UpdateDefaultAutoScalingConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_UpdateDefaultAutoScalingConfiguration.md)
+- [UpdateService](https://docs.aws.amazon.com/apprunner/latest/api/API_UpdateService.md)
+- [UpdateVpcIngressConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_UpdateVpcIngressConnection.md)
+
+
+## [Data Types](https://docs.aws.amazon.com/apprunner/latest/api/API_Types.md)
+
+- [AuthenticationConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_AuthenticationConfiguration.md): Describes resources needed to authenticate access to some source repositories.
+- [AutoScalingConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_AutoScalingConfiguration.md): Describes an AWS App Runner automatic scaling configuration resource.
+- [AutoScalingConfigurationSummary](https://docs.aws.amazon.com/apprunner/latest/api/API_AutoScalingConfigurationSummary.md): Provides summary information about an AWS App Runner automatic scaling configuration resource.
+- [CertificateValidationRecord](https://docs.aws.amazon.com/apprunner/latest/api/API_CertificateValidationRecord.md): Describes a certificate CNAME record to add to your DNS.
+- [CodeConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_CodeConfiguration.md): Describes the configuration that AWS App Runner uses to build and run an App Runner service from a source code repository.
+- [CodeConfigurationValues](https://docs.aws.amazon.com/apprunner/latest/api/API_CodeConfigurationValues.md): Describes the basic configuration needed for building and running an AWS App Runner service.
+- [CodeRepository](https://docs.aws.amazon.com/apprunner/latest/api/API_CodeRepository.md): Describes a source code repository.
+- [Connection](https://docs.aws.amazon.com/apprunner/latest/api/API_Connection.md): Describes an AWS App Runner connection resource.
+- [ConnectionSummary](https://docs.aws.amazon.com/apprunner/latest/api/API_ConnectionSummary.md): Provides summary information about an AWS App Runner connection resource.
+- [CustomDomain](https://docs.aws.amazon.com/apprunner/latest/api/API_CustomDomain.md): Describes a custom domain that's associated with an AWS App Runner service.
+- [EgressConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_EgressConfiguration.md): Describes configuration settings related to outbound network traffic of an AWS App Runner service.
+- [EncryptionConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_EncryptionConfiguration.md): Describes a custom encryption key that AWS App Runner uses to encrypt copies of the source repository and service logs.
+- [HealthCheckConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_HealthCheckConfiguration.md): Describes the settings for the health check that AWS App Runner performs to monitor the health of a service.
+- [ImageConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_ImageConfiguration.md): Describes the configuration that AWS App Runner uses to run an App Runner service using an image pulled from a source image repository.
+- [ImageRepository](https://docs.aws.amazon.com/apprunner/latest/api/API_ImageRepository.md): Describes a source image repository.
+- [IngressConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_IngressConfiguration.md): Network configuration settings for inbound network traffic.
+- [IngressVpcConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_IngressVpcConfiguration.md): The configuration of your VPC and the associated VPC endpoint.
+- [InstanceConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_InstanceConfiguration.md): Describes the runtime configuration of an AWS App Runner service instance (scaling unit).
+- [ListVpcIngressConnectionsFilter](https://docs.aws.amazon.com/apprunner/latest/api/API_ListVpcIngressConnectionsFilter.md): Returns a list of VPC Ingress Connections based on the filter provided.
+- [NetworkConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_NetworkConfiguration.md): Describes configuration settings related to network traffic of an AWS App Runner service.
+- [ObservabilityConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_ObservabilityConfiguration.md): Describes an AWS App Runner observability configuration resource.
+- [ObservabilityConfigurationSummary](https://docs.aws.amazon.com/apprunner/latest/api/API_ObservabilityConfigurationSummary.md): Provides summary information about an AWS App Runner observability configuration resource.
+- [OperationSummary](https://docs.aws.amazon.com/apprunner/latest/api/API_OperationSummary.md): Provides summary information for an operation that occurred on an AWS App Runner service.
+- [Service](https://docs.aws.amazon.com/apprunner/latest/api/API_Service.md): Describes an AWS App Runner service.
+- [ServiceObservabilityConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_ServiceObservabilityConfiguration.md): Describes the observability configuration of an AWS App Runner service.
+- [ServiceSummary](https://docs.aws.amazon.com/apprunner/latest/api/API_ServiceSummary.md): Provides summary information for an AWS App Runner service.
+- [SourceCodeVersion](https://docs.aws.amazon.com/apprunner/latest/api/API_SourceCodeVersion.md): Identifies a version of code that AWS App Runner refers to within a source code repository.
+- [SourceConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_SourceConfiguration.md): Describes the source deployed to an AWS App Runner service.
+- [Tag](https://docs.aws.amazon.com/apprunner/latest/api/API_Tag.md): Describes a tag that is applied to an AWS App Runner resource.
+- [TraceConfiguration](https://docs.aws.amazon.com/apprunner/latest/api/API_TraceConfiguration.md): Describes the configuration of the tracing feature within an AWS App Runner observability configuration.
+- [VpcConnector](https://docs.aws.amazon.com/apprunner/latest/api/API_VpcConnector.md): Describes an AWS App Runner VPC connector resource.
+- [VpcDNSTarget](https://docs.aws.amazon.com/apprunner/latest/api/API_VpcDNSTarget.md): DNS Target record for a custom domain of this Amazon VPC.
+- [VpcIngressConnection](https://docs.aws.amazon.com/apprunner/latest/api/API_VpcIngressConnection.md): The AWS App Runner resource that specifies an App Runner endpoint for incoming traffic.
+- [VpcIngressConnectionSummary](https://docs.aws.amazon.com/apprunner/latest/api/API_VpcIngressConnectionSummary.md): Provides summary information about an VPC Ingress Connection, which includes its VPC Ingress Connection ARN and its associated Service ARN.
