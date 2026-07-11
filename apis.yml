@@ -81,6 +81,12 @@ apis:
   - type: Conformance
     url: conformance/amazon-app-runner-conformance.yml
 common:
+- type: VulnerabilityDisclosure
+  url: security/amazon-app-runner-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-app-runner-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-app-runner-authentication.yml
 - type: Packages
   url: packages/amazon-app-runner-packages.yml
 - type: WellKnown
