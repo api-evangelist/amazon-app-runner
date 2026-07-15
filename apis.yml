@@ -81,6 +81,8 @@ apis:
   - type: Conformance
     url: conformance/amazon-app-runner-conformance.yml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-app-runner-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/amazon-app-runner-vulnerability-disclosure.yml
 - type: DomainSecurity
