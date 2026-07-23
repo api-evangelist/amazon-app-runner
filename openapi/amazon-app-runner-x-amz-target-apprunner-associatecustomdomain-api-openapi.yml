@@ -1,0 +1,373 @@
+openapi: 3.0.0
+info:
+  version: '2020-05-15'
+  x-release: v4
+  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.AssociateCustomDomain API'
+  description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: apprunner
+  x-aws-signingName: apprunner
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/apprunner-2020-05-15.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://apprunner.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS App Runner multi-region endpoint
+- url: https://apprunner.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS App Runner multi-region endpoint
+- url: http://apprunner.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS App Runner endpoint for China (Beijing) and China (Ningxia)
+- url: https://apprunner.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS App Runner endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=AppRunner.AssociateCustomDomain'
+paths:
+  /#X-Amz-Target=AppRunner.AssociateCustomDomain:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: AssociateCustomDomain
+      description: <p>Associate your own domain name with the App Runner subdomain URL of your App Runner service.</p> <p>After you call <code>AssociateCustomDomain</code> and receive a successful response, use the information in the <a>CustomDomain</a> record that's returned to add CNAME records to your Domain Name System (DNS). For each mapped domain name, add a mapping to the target App Runner subdomain and one or more certificate validation records. App Runner then performs DNS validation to verify that you own or control the domain name that you associated. App Runner tracks domain validity in a certificate stored in <a href="https://docs.aws.amazon.com/acm/latest/userguide">AWS Certificate Manager (ACM)</a>.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateCustomDomainResponse'
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+        '481':
+          description: InternalServiceErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServiceErrorException'
+        '482':
+          description: InvalidStateException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidStateException'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssociateCustomDomainRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AppRunner.AssociateCustomDomain
+      tags:
+      - '#X Amz Target=AppRunner.AssociateCustomDomain'
+components:
+  schemas:
+    CustomDomain:
+      type: object
+      required:
+      - DomainName
+      - EnableWWWSubdomain
+      - Status
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/DomainName'
+          - description: An associated custom domain endpoint. It can be a root domain (for example, <code>example.com</code>), a subdomain (for example, <code>login.example.com</code> or <code>admin.login.example.com</code>), or a wildcard (for example, <code>*.example.com</code>).
+        EnableWWWSubdomain:
+          allOf:
+          - $ref: '#/components/schemas/NullableBoolean'
+          - description: When <code>true</code>, the subdomain <code>www.<i>DomainName</i> </code> is associated with the App Runner service in addition to the base domain.
+        CertificateValidationRecords:
+          allOf:
+          - $ref: '#/components/schemas/CertificateValidationRecordList'
+          - description: A list of certificate CNAME records that's used for this domain name.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/CustomDomainAssociationStatus'
+          - description: The current state of the domain name association.
+      description: Describes a custom domain that's associated with an App Runner service.
+    String:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 51200
+    VpcDNSTargetList:
+      type: array
+      items:
+        $ref: '#/components/schemas/VpcDNSTarget'
+    CertificateValidationRecordList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CertificateValidationRecord'
+    NullableBoolean:
+      type: boolean
+    AssociateCustomDomainResponse:
+      type: object
+      required:
+      - DNSTarget
+      - ServiceArn
+      - CustomDomain
+      - VpcDNSTargets
+      properties:
+        DNSTarget:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The App Runner subdomain of the App Runner service. The custom domain name is mapped to this target name.
+        ServiceArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner service with which a custom domain name is associated.
+        CustomDomain:
+          allOf:
+          - $ref: '#/components/schemas/CustomDomain'
+          - description: A description of the domain name that's being associated.
+        VpcDNSTargets:
+          allOf:
+          - $ref: '#/components/schemas/VpcDNSTargetList'
+          - description: 'DNS Target records for the custom domains of this Amazon VPC. '
+    VpcDNSTarget:
+      type: object
+      properties:
+        VpcIngressConnectionArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the VPC Ingress Connection that is associated with your service.
+        VpcId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The ID of the Amazon VPC that is associated with the custom domain name of the target DNS.
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/DomainName'
+          - description: The domain name of your target DNS that is associated with the Amazon VPC.
+      description: DNS Target record for a custom domain of this Amazon VPC.
+    CustomDomainAssociationStatus:
+      type: string
+      enum:
+      - CREATING
+      - CREATE_FAILED
+      - ACTIVE
+      - DELETING
+      - DELETE_FAILED
+      - PENDING_CERTIFICATE_DNS_VALIDATION
+      - BINDING_CERTIFICATE
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    InternalServiceErrorException: {}
+    CertificateValidationRecord:
+      type: object
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The certificate CNAME record name.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The record type, always <code>CNAME</code>.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The certificate CNAME record value.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/CertificateValidationRecordStatus'
+          - description: The current state of the certificate CNAME record validation. It should change to <code>SUCCESS</code> after App Runner completes validation with your DNS.
+      description: Describes a certificate CNAME record to add to your DNS. For more information, see <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_AssociateCustomDomain.html">AssociateCustomDomain</a>.
+    InvalidRequestException: {}
+    DomainName:
+      type: string
+      pattern: '[A-Za-z0-9*.-]{1,255}'
+      minLength: 1
+      maxLength: 255
+    AssociateCustomDomainRequest:
+      type: object
+      required:
+      - ServiceArn
+      - DomainName
+      title: AssociateCustomDomainRequest
+      properties:
+        ServiceArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner service that you want to associate a custom domain name with.
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/DomainName'
+          - description: A custom domain endpoint to associate. Specify a root domain (for example, <code>example.com</code>), a subdomain (for example, <code>login.example.com</code> or <code>admin.login.example.com</code>), or a wildcard (for example, <code>*.example.com</code>).
+        EnableWWWSubdomain:
+          allOf:
+          - $ref: '#/components/schemas/NullableBoolean'
+          - description: '<p>Set to <code>true</code> to associate the subdomain <code>www.<i>DomainName</i> </code> with the App Runner service in addition to the base domain.</p> <p>Default: <code>true</code> </p>'
+    CertificateValidationRecordStatus:
+      type: string
+      enum:
+      - PENDING_VALIDATION
+      - SUCCESS
+      - FAILED
+    InvalidStateException: {}
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/apprunner/
+x-hasEquivalentPaths: true

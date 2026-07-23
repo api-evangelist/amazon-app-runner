@@ -1,0 +1,739 @@
+openapi: 3.0.0
+info:
+  version: '2020-05-15'
+  x-release: v4
+  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.DescribeService API'
+  description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: apprunner
+  x-aws-signingName: apprunner
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/apprunner-2020-05-15.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://apprunner.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS App Runner multi-region endpoint
+- url: https://apprunner.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS App Runner multi-region endpoint
+- url: http://apprunner.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS App Runner endpoint for China (Beijing) and China (Ningxia)
+- url: https://apprunner.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS App Runner endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=AppRunner.DescribeService'
+paths:
+  /#X-Amz-Target=AppRunner.DescribeService:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeService
+      description: Return a full description of an App Runner service.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeServiceResponse'
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: InternalServiceErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServiceErrorException'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeServiceRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AppRunner.DescribeService
+      tags:
+      - '#X Amz Target=AppRunner.DescribeService'
+components:
+  schemas:
+    KmsKeyArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:kms:[a-z\-]+-[0-9]{1}:[0-9]{12}:key\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
+      minLength: 0
+      maxLength: 256
+    ServiceObservabilityConfiguration:
+      type: object
+      required:
+      - ObservabilityEnabled
+      properties:
+        ObservabilityEnabled:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: When <code>true</code>, an observability configuration resource is associated with the service, and an <code>ObservabilityConfigurationArn</code> is specified.
+        ObservabilityConfigurationArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: '<p>The Amazon Resource Name (ARN) of the observability configuration that is associated with the service. Specified only when <code>ObservabilityEnabled</code> is <code>true</code>.</p> <p>Specify an ARN with a name and a revision number to associate that revision. For example: <code>arn:aws:apprunner:us-east-1:123456789012:observabilityconfiguration/xray-tracing/3</code> </p> <p>Specify just the name to associate the latest revision. For example: <code>arn:aws:apprunner:us-east-1:123456789012:observabilityconfiguration/xray-tracing</code> </p>'
+      description: Describes the observability configuration of an App Runner service. These are additional observability features, like tracing, that you choose to enable. They're configured in a separate resource that you associate with your service.
+    DescribeServiceRequest:
+      type: object
+      required:
+      - ServiceArn
+      title: DescribeServiceRequest
+      properties:
+        ServiceArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner service that you want a description for.
+    ConfigurationSource:
+      type: string
+      enum:
+      - REPOSITORY
+      - API
+    HealthCheckHealthyThreshold:
+      type: integer
+      minimum: 1
+      maximum: 20
+    Boolean:
+      type: boolean
+    Runtime:
+      type: string
+      enum:
+      - PYTHON_3
+      - NODEJS_12
+      - NODEJS_14
+      - CORRETTO_8
+      - CORRETTO_11
+      - NODEJS_16
+      - GO_1
+      - DOTNET_6
+      - PHP_81
+      - RUBY_31
+    String:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 51200
+    ImageConfiguration:
+      type: object
+      properties:
+        RuntimeEnvironmentVariables:
+          allOf:
+          - $ref: '#/components/schemas/RuntimeEnvironmentVariables'
+          - description: Environment variables that are available to your running App Runner service. An array of key-value pairs.
+        StartCommand:
+          allOf:
+          - $ref: '#/components/schemas/StartCommand'
+          - description: An optional command that App Runner runs to start the application in the source image. If specified, this command overrides the Docker image’s default start command.
+        Port:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: '<p>The port that your application listens to in the container.</p> <p>Default: <code>8080</code> </p>'
+        RuntimeEnvironmentSecrets:
+          allOf:
+          - $ref: '#/components/schemas/RuntimeEnvironmentSecrets'
+          - description: <p>An array of key-value pairs representing the secrets and parameters that get referenced to your service as an environment variable. The supported values are either the full Amazon Resource Name (ARN) of the Secrets Manager secret or the full ARN of the parameter in the Amazon Web Services Systems Manager Parameter Store.</p> <note> <ul> <li> <p> If the Amazon Web Services Systems Manager Parameter Store parameter exists in the same Amazon Web Services Region as the service that you're launching, you can use either the full ARN or name of the secret. If the parameter exists in a different Region, then the full ARN must be specified. </p> </li> <li> <p> Currently, cross account referencing of Amazon Web Services Systems Manager Parameter Store parameter is not supported. </p> </li> </ul> </note>
+      description: Describes the configuration that App Runner uses to run an App Runner service using an image pulled from a source image repository.
+    Service:
+      type: object
+      required:
+      - ServiceName
+      - ServiceId
+      - ServiceArn
+      - CreatedAt
+      - UpdatedAt
+      - Status
+      - SourceConfiguration
+      - InstanceConfiguration
+      - AutoScalingConfigurationSummary
+      - NetworkConfiguration
+      properties:
+        ServiceName:
+          allOf:
+          - $ref: '#/components/schemas/ServiceName'
+          - description: The customer-provided service name.
+        ServiceId:
+          allOf:
+          - $ref: '#/components/schemas/ServiceId'
+          - description: An ID that App Runner generated for this service. It's unique within the Amazon Web Services Region.
+        ServiceArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of this service.
+        ServiceUrl:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
+        CreatedAt:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time when the App Runner service was created. It's in the Unix time stamp format.
+        UpdatedAt:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time when the App Runner service was last updated at. It's in the Unix time stamp format.
+        DeletedAt:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time when the App Runner service was deleted. It's in the Unix time stamp format.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ServiceStatus'
+          - description: <p>The current state of the App Runner service. These particular values mean the following.</p> <ul> <li> <p> <code>CREATE_FAILED</code> – The service failed to create. To troubleshoot this failure, read the failure events and logs, change any parameters that need to be fixed, and retry the call to create the service.</p> <p>The failed service isn't usable, and still counts towards your service quota. When you're done analyzing the failure, delete the service.</p> </li> <li> <p> <code>DELETE_FAILED</code> – The service failed to delete and can't be successfully recovered. Retry the service deletion call to ensure that all related resources are removed.</p> </li> </ul>
+        SourceConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/SourceConfiguration'
+          - description: The source deployed to the App Runner service. It can be a code or an image repository.
+        InstanceConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/InstanceConfiguration'
+          - description: The runtime configuration of instances (scaling units) of this service.
+        EncryptionConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionConfiguration'
+          - description: The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web Services managed key.
+        HealthCheckConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckConfiguration'
+          - description: The settings for the health check that App Runner performs to monitor the health of this service.
+        AutoScalingConfigurationSummary:
+          allOf:
+          - $ref: '#/components/schemas/AutoScalingConfigurationSummary'
+          - description: Summary information for the App Runner automatic scaling configuration resource that's associated with this service.
+        NetworkConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/NetworkConfiguration'
+          - description: Configuration settings related to network traffic of the web application that this service runs.
+        ObservabilityConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/ServiceObservabilityConfiguration'
+          - description: The observability configuration of this service.
+      description: <p>Describes an App Runner service. It can describe a service in any state, including deleted services.</p> <p>This type contains the full information about a service, including configuration details. It's returned by the <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html">CreateService</a>, <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_DescribeService.html">DescribeService</a>, and <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_DeleteService.html">DeleteService</a> actions. A subset of this information is returned by the <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_ListServices.html">ListServices</a> action using the <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_ServiceSummary.html">ServiceSummary</a> type.</p>
+    NullableBoolean:
+      type: boolean
+    RuntimeEnvironmentVariables:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/RuntimeEnvironmentVariablesValue'
+    ImageIdentifier:
+      type: string
+      pattern: ([0-9]{12}.dkr.ecr.[a-z\-]+-[0-9]{1}.amazonaws.com\/((?:[a-z0-9]+(?:[._-][a-z0-9]+)*\/)*[a-z0-9]+(?:[._-][a-z0-9]+)*)(:([\w\d+\-=._:\/@])+|@([\w\d\:]+))?)|(^public\.ecr\.aws\/.+\/((?:[a-z0-9]+(?:[._-][a-z0-9]+)*\/)*[a-z0-9]+(?:[._-][a-z0-9]+)*)(:([\w\d+\-=._:\/@])+|@([\w\d\:]+))?)
+      minLength: 1
+      maxLength: 1024
+    HealthCheckTimeout:
+      type: integer
+      minimum: 1
+      maximum: 20
+    CodeRepository:
+      type: object
+      required:
+      - RepositoryUrl
+      - SourceCodeVersion
+      properties:
+        RepositoryUrl:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The location of the repository that contains the source code.
+        SourceCodeVersion:
+          allOf:
+          - $ref: '#/components/schemas/SourceCodeVersion'
+          - description: The version that should be used within the source code repository.
+        CodeConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/CodeConfiguration'
+          - description: <p>Configuration for building and running the service from a source code repository.</p> <note> <p> <code>CodeConfiguration</code> is required only for <code>CreateService</code> request.</p> </note>
+      description: Describes a source code repository.
+    AuthenticationConfiguration:
+      type: object
+      properties:
+        ConnectionArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner connection that enables the App Runner service to connect to a source repository. It's required for GitHub code repositories.
+        AccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/RoleArn'
+          - description: The Amazon Resource Name (ARN) of the IAM role that grants the App Runner service access to a source repository. It's required for ECR image repositories (but not for ECR Public repositories).
+      description: Describes resources needed to authenticate access to some source repositories. The specific resource depends on the repository provider.
+    ServiceId:
+      type: string
+      pattern: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}'
+      minLength: 32
+      maxLength: 32
+    ServiceStatus:
+      type: string
+      enum:
+      - CREATE_FAILED
+      - RUNNING
+      - DELETED
+      - DELETE_FAILED
+      - PAUSED
+      - OPERATION_IN_PROGRESS
+    SourceCodeVersion:
+      type: object
+      required:
+      - Type
+      - Value
+      properties:
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/SourceCodeVersionType'
+          - description: <p>The type of version identifier.</p> <p>For a git-based repository, branches represent versions.</p>
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: <p>A source code version.</p> <p>For a git-based repository, a branch name maps to a specific version. App Runner uses the most recent commit to the branch.</p>
+      description: Identifies a version of code that App Runner refers to within a source code repository.
+    EncryptionConfiguration:
+      type: object
+      required:
+      - KmsKey
+      properties:
+        KmsKey:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyArn'
+          - description: The ARN of the KMS key that's used for encryption.
+      description: Describes a custom encryption key that App Runner uses to encrypt copies of the source repository and service logs.
+    IngressConfiguration:
+      type: object
+      properties:
+        IsPubliclyAccessible:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: 'Specifies whether your App Runner service is publicly accessible. To make the service publicly accessible set it to <code>True</code>. To make the service privately accessible, from only within an Amazon VPC set it to <code>False</code>. '
+      description: Network configuration settings for inbound network traffic.
+    ServiceName:
+      type: string
+      pattern: '[A-Za-z0-9][A-Za-z0-9-_]{3,39}'
+      minLength: 4
+      maxLength: 40
+    HealthCheckConfiguration:
+      type: object
+      properties:
+        Protocol:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckProtocol'
+          - description: '<p>The IP protocol that App Runner uses to perform health checks for your service.</p> <p>If you set <code>Protocol</code> to <code>HTTP</code>, App Runner sends health check requests to the HTTP path specified by <code>Path</code>.</p> <p>Default: <code>TCP</code> </p>'
+        Path:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckPath'
+          - description: '<p>The URL that health check requests are sent to.</p> <p> <code>Path</code> is only applicable when you set <code>Protocol</code> to <code>HTTP</code>.</p> <p>Default: <code>"/"</code> </p>'
+        Interval:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckInterval'
+          - description: '<p>The time interval, in seconds, between health checks.</p> <p>Default: <code>5</code> </p>'
+        Timeout:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckTimeout'
+          - description: '<p>The time, in seconds, to wait for a health check response before deciding it failed.</p> <p>Default: <code>2</code> </p>'
+        HealthyThreshold:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckHealthyThreshold'
+          - description: '<p>The number of consecutive checks that must succeed before App Runner decides that the service is healthy.</p> <p>Default: <code>1</code> </p>'
+        UnhealthyThreshold:
+          allOf:
+          - $ref: '#/components/schemas/HealthCheckUnhealthyThreshold'
+          - description: '<p>The number of consecutive checks that must fail before App Runner decides that the service is unhealthy.</p> <p>Default: <code>5</code> </p>'
+      description: Describes the settings for the health check that App Runner performs to monitor the health of a service.
+    HealthCheckInterval:
+      type: integer
+      minimum: 1
+      maximum: 20
+    BuildCommand:
+      type: string
+      pattern: '[^\x0a\x0d]+'
+      format: password
+    HealthCheckUnhealthyThreshold:
+      type: integer
+      minimum: 1
+      maximum: 20
+    AutoScalingConfigurationName:
+      type: string
+      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,31}'
+      minLength: 4
+      maxLength: 32
+    CodeConfiguration:
+      type: object
+      required:
+      - ConfigurationSource
+      properties:
+        ConfigurationSource:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationSource'
+          - description: <p>The source of the App Runner configuration. Values are interpreted as follows:</p> <ul> <li> <p> <code>REPOSITORY</code> – App Runner reads configuration values from the <code>apprunner.yaml</code> file in the source code repository and ignores <code>CodeConfigurationValues</code>.</p> </li> <li> <p> <code>API</code> – App Runner uses configuration values provided in <code>CodeConfigurationValues</code> and ignores the <code>apprunner.yaml</code> file in the source code repository.</p> </li> </ul>
+        CodeConfigurationValues:
+          allOf:
+          - $ref: '#/components/schemas/CodeConfigurationValues'
+          - description: The basic configuration for building and running the App Runner service. Use it to quickly launch an App Runner service without providing a <code>apprunner.yaml</code> file in the source code repository (or ignoring the file if it exists).
+      description: Describes the configuration that App Runner uses to build and run an App Runner service from a source code repository.
+    InstanceConfiguration:
+      type: object
+      properties:
+        Cpu:
+          allOf:
+          - $ref: '#/components/schemas/Cpu'
+          - description: '<p>The number of CPU units reserved for each instance of your App Runner service.</p> <p>Default: <code>1 vCPU</code> </p>'
+        Memory:
+          allOf:
+          - $ref: '#/components/schemas/Memory'
+          - description: '<p>The amount of memory, in MB or GB, reserved for each instance of your App Runner service.</p> <p>Default: <code>2 GB</code> </p>'
+        InstanceRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/RoleArn'
+          - description: The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any Amazon Web Services APIs.
+      description: Describes the runtime configuration of an App Runner service instance (scaling unit).
+    RuntimeEnvironmentSecretsValue:
+      type: string
+      minLength: 1
+      maxLength: 2048
+      format: password
+    DescribeServiceResponse:
+      type: object
+      required:
+      - Service
+      properties:
+        Service:
+          allOf:
+          - $ref: '#/components/schemas/Service'
+          - description: A full description of the App Runner service that you specified in this request.
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    InternalServiceErrorException: {}
+    AutoScalingConfigurationSummary:
+      type: object
+      properties:
+        AutoScalingConfigurationArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of this auto scaling configuration.
+        AutoScalingConfigurationName:
+          allOf:
+          - $ref: '#/components/schemas/AutoScalingConfigurationName'
+          - description: The customer-provided auto scaling configuration name. It can be used in multiple revisions of a configuration.
+        AutoScalingConfigurationRevision:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'The revision of this auto scaling configuration. It''s unique among all the active configurations (<code>"Status": "ACTIVE"</code>) with the same <code>AutoScalingConfigurationName</code>.'
+      description: <p>Provides summary information about an App Runner automatic scaling configuration resource.</p> <p>This type contains limited information about an auto scaling configuration. It includes only identification information, without configuration details. It's returned by the <a>ListAutoScalingConfigurations</a> action. Complete configuration information is returned by the <a>CreateAutoScalingConfiguration</a>, <a>DescribeAutoScalingConfiguration</a>, and <a>DeleteAutoScalingConfiguration</a> actions using the <a>AutoScalingConfiguration</a> type.</p>
+    EgressType:
+      type: string
+      enum:
+      - DEFAULT
+      - VPC
+    SourceConfiguration:
+      type: object
+      properties:
+        CodeRepository:
+          allOf:
+          - $ref: '#/components/schemas/CodeRepository'
+          - description: <p>The description of a source code repository.</p> <p>You must provide either this member or <code>ImageRepository</code> (but not both).</p>
+        ImageRepository:
+          allOf:
+          - $ref: '#/components/schemas/ImageRepository'
+          - description: <p>The description of a source image repository.</p> <p>You must provide either this member or <code>CodeRepository</code> (but not both).</p>
+        AutoDeploymentsEnabled:
+          allOf:
+          - $ref: '#/components/schemas/NullableBoolean'
+          - description: '<p>If <code>true</code>, continuous integration from the source repository is enabled for the App Runner service. Each repository change (including any source code commit or new image version) starts a deployment.</p> <p>Default: App Runner sets to <code>false</code> for a source image that uses an ECR Public repository or an ECR repository that''s in an Amazon Web Services account other than the one that the service is in. App Runner sets to <code>true</code> in all other cases (which currently include a source code repository or a source image using a same-account ECR repository).</p>'
+        AuthenticationConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/AuthenticationConfiguration'
+          - description: Describes the resources that are needed to authenticate access to some source repositories.
+      description: Describes the source deployed to an App Runner service. It can be a code or an image repository.
+    CodeConfigurationValues:
+      type: object
+      required:
+      - Runtime
+      properties:
+        Runtime:
+          allOf:
+          - $ref: '#/components/schemas/Runtime'
+          - description: A runtime environment type for building and running an App Runner service. It represents a programming language runtime.
+        BuildCommand:
+          allOf:
+          - $ref: '#/components/schemas/BuildCommand'
+          - description: The command App Runner runs to build your application.
+        StartCommand:
+          allOf:
+          - $ref: '#/components/schemas/StartCommand'
+          - description: The command App Runner runs to start your application.
+        Port:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: '<p>The port that your application listens to in the container.</p> <p>Default: <code>8080</code> </p>'
+        RuntimeEnvironmentVariables:
+          allOf:
+          - $ref: '#/components/schemas/RuntimeEnvironmentVariables'
+          - description: The environment variables that are available to your running App Runner service. An array of key-value pairs.
+        RuntimeEnvironmentSecrets:
+          allOf:
+          - $ref: '#/components/schemas/RuntimeEnvironmentSecrets'
+          - description: <p>An array of key-value pairs representing the secrets and parameters that get referenced to your service as an environment variable. The supported values are either the full Amazon Resource Name (ARN) of the Secrets Manager secret or the full ARN of the parameter in the Amazon Web Services Systems Manager Parameter Store.</p> <note> <ul> <li> <p> If the Amazon Web Services Systems Manager Parameter Store parameter exists in the same Amazon Web Services Region as the service that you're launching, you can use either the full ARN or name of the secret. If the parameter exists in a different Region, then the full ARN must be specified. </p> </li> <li> <p> Currently, cross account referencing of Amazon Web Services Systems Manager Parameter Store parameter is not supported. </p> </li> </ul> </note>
+      description: Describes the basic configuration needed for building and running an App Runner service. This type doesn't support the full set of possible configuration options. Fur full configuration capabilities, use a <code>apprunner.yaml</code> file in the source code repository.
+    RuntimeEnvironmentSecrets:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/RuntimeEnvironmentSecretsValue'
+    RuntimeEnvironmentVariablesValue:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 51200
+      format: password
+    HealthCheckPath:
+      type: string
+      minLength: 1
+    StartCommand:
+      type: string
+      pattern: '[^\x0a\x0d]+'
+      format: password
+    ImageRepositoryType:
+      type: string
+      enum:
+      - ECR
+      - ECR_PUBLIC
+    Memory:
+      type: string
+      pattern: 512|1024|2048|3072|4096|6144|8192|10240|12288|(0.5|1|2|3|4|6|8|10|12) GB
+      minLength: 3
+      maxLength: 6
+    InvalidRequestException: {}
+    ImageRepository:
+      type: object
+      required:
+      - ImageIdentifier
+      - ImageRepositoryType
+      properties:
+        ImageIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/ImageIdentifier'
+          - description: <p>The identifier of an image.</p> <p>For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the image name format, see <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html">Pulling an image</a> in the <i>Amazon ECR User Guide</i>.</p>
+        ImageConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/ImageConfiguration'
+          - description: Configuration for running the identified image.
+        ImageRepositoryType:
+          allOf:
+          - $ref: '#/components/schemas/ImageRepositoryType'
+          - description: The type of the image repository. This reflects the repository provider and whether the repository is private or public.
+      description: Describes a source image repository.
+    Integer:
+      type: integer
+    EgressConfiguration:
+      type: object
+      properties:
+        EgressType:
+          allOf:
+          - $ref: '#/components/schemas/EgressType'
+          - description: <p>The type of egress configuration.</p> <p>Set to <code>DEFAULT</code> for access to resources hosted on public networks.</p> <p>Set to <code>VPC</code> to associate your service to a custom VPC specified by <code>VpcConnectorArn</code>.</p>
+        VpcConnectorArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when <code>EgressType = VPC</code>.
+      description: Describes configuration settings related to outbound network traffic of an App Runner service.
+    Timestamp:
+      type: string
+      format: date-time
+    ResourceNotFoundException: {}
+    Cpu:
+      type: string
+      pattern: 256|512|1024|2048|4096|(0.25|0.5|1|2|4) vCPU
+      minLength: 3
+      maxLength: 9
+    SourceCodeVersionType:
+      type: string
+      enum:
+      - BRANCH
+    HealthCheckProtocol:
+      type: string
+      enum:
+      - TCP
+      - HTTP
+    RoleArn:
+      type: string
+      pattern: arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):iam::[0-9]{12}:(role|role\/service-role)\/[\w+=,.@\-/]{1,1000}
+      minLength: 29
+      maxLength: 1024
+    NetworkConfiguration:
+      type: object
+      properties:
+        EgressConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/EgressConfiguration'
+          - description: Network configuration settings for outbound message traffic.
+        IngressConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/IngressConfiguration'
+          - description: Network configuration settings for inbound message traffic.
+      description: Describes configuration settings related to network traffic of an App Runner service. Consists of embedded objects for each configurable network feature.
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/apprunner/
+x-hasEquivalentPaths: true
