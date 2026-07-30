@@ -3,7 +3,19 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-app-runner/refs/heads/main/apis.yml
 name: Amazon App Runner
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-app-runner.png
 specificationVersion: '0.19'
 description: >-
   AWS App Runner is a fully managed container application service that lets
@@ -21,25 +33,20 @@ tags:
 - Serverless
 - Web Applications
 apis:
-- name: Amazon App Runner API
+- aid: amazon-app-runner:amazon-app-runner-amazon-app-runner-aws-app-runner-api-api
+  name: Amazon App Runner Amazon App Runner AWS App Runner API API
   description: >-
-    The AWS App Runner API enables programmatic management of App Runner
-    services, including creating and managing services, auto scaling
-    configurations, custom domains, VPC connectors, and observability
-    configurations for containerized web applications.
-  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+    The Amazon App Runner AWS App Runner API API from Amazon App Runner — 1 operation(s) for amazon app
+    runner aws app runner api.
   humanURL: https://aws.amazon.com/apprunner/
   baseURL: https://apprunner.amazonaws.com
   tags:
-  - Containers
-  - Deployment
-  - Serverless
-  - Web Applications
+  - Amazon App Runner AWS App Runner API
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-amazon-app-runner-aws-app-runner-api-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
-  - type: OpenAPI
-    url: openapi/amazon-app-runner-openapi.yaml
   - type: Pricing
     url: https://aws.amazon.com/apprunner/pricing/
   - type: Getting Started
@@ -72,10 +79,1774 @@ apis:
     url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
   - type: JSONLD
     url: json-ld/amazon-app-runner-context.jsonld
-  - type: Overlay
-    url: overlays/amazon-app-runner-openapi-overlay.yaml
-  - type: MCPServer
-    url: mcp/amazon-app-runner-mcp.yml
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-associatecustomdomain-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.AssociateCustomDomain API'
+  description: >-
+    The #X Amz Target=AppRunner.AssociateCustomDomain API from Amazon App Runner — 1 operation(s) for
+    #x amz target=apprunner.associatecustomdomain.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.AssociateCustomDomain'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-associatecustomdomain-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-createautoscalingconfiguration-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.CreateAutoScalingConfiguration API'
+  description: >-
+    The #X Amz Target=AppRunner.CreateAutoScalingConfiguration API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.createautoscalingconfiguration.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.CreateAutoScalingConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-createautoscalingconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-createconnection-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.CreateConnection API'
+  description: >-
+    The #X Amz Target=AppRunner.CreateConnection API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.createconnection.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.CreateConnection'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-createconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-createobservabilityconfiguration-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.CreateObservabilityConfiguration API'
+  description: >-
+    The #X Amz Target=AppRunner.CreateObservabilityConfiguration API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.createobservabilityconfiguration.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.CreateObservabilityConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-createobservabilityconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-createservice-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.CreateService API'
+  description: >-
+    The #X Amz Target=AppRunner.CreateService API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.createservice.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.CreateService'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-createservice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-createvpcconnector-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.CreateVpcConnector API'
+  description: >-
+    The #X Amz Target=AppRunner.CreateVpcConnector API from Amazon App Runner — 1 operation(s) for #x
+    amz target=apprunner.createvpcconnector.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.CreateVpcConnector'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-createvpcconnector-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-createvpcingressconnection-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.CreateVpcIngressConnection API'
+  description: >-
+    The #X Amz Target=AppRunner.CreateVpcIngressConnection API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.createvpcingressconnection.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.CreateVpcIngressConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-createvpcingressconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-deleteautoscalingconfiguration-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DeleteAutoScalingConfiguration API'
+  description: >-
+    The #X Amz Target=AppRunner.DeleteAutoScalingConfiguration API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.deleteautoscalingconfiguration.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DeleteAutoScalingConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-deleteautoscalingconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-deleteconnection-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DeleteConnection API'
+  description: >-
+    The #X Amz Target=AppRunner.DeleteConnection API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.deleteconnection.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DeleteConnection'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-deleteconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-deleteobservabilityconfiguration-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DeleteObservabilityConfiguration API'
+  description: >-
+    The #X Amz Target=AppRunner.DeleteObservabilityConfiguration API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.deleteobservabilityconfiguration.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DeleteObservabilityConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-deleteobservabilityconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-deleteservice-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DeleteService API'
+  description: >-
+    The #X Amz Target=AppRunner.DeleteService API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.deleteservice.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DeleteService'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-deleteservice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-deletevpcconnector-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DeleteVpcConnector API'
+  description: >-
+    The #X Amz Target=AppRunner.DeleteVpcConnector API from Amazon App Runner — 1 operation(s) for #x
+    amz target=apprunner.deletevpcconnector.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DeleteVpcConnector'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-deletevpcconnector-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-deletevpcingressconnection-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DeleteVpcIngressConnection API'
+  description: >-
+    The #X Amz Target=AppRunner.DeleteVpcIngressConnection API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.deletevpcingressconnection.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DeleteVpcIngressConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-deletevpcingressconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-describeautoscalingconfiguration-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DescribeAutoScalingConfiguration API'
+  description: >-
+    The #X Amz Target=AppRunner.DescribeAutoScalingConfiguration API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.describeautoscalingconfiguration.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DescribeAutoScalingConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-describeautoscalingconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-describecustomdomains-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DescribeCustomDomains API'
+  description: >-
+    The #X Amz Target=AppRunner.DescribeCustomDomains API from Amazon App Runner — 1 operation(s) for
+    #x amz target=apprunner.describecustomdomains.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DescribeCustomDomains'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-describecustomdomains-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-describeobservabilityconfiguration-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DescribeObservabilityConfiguration API'
+  description: >-
+    The #X Amz Target=AppRunner.DescribeObservabilityConfiguration API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.describeobservabilityconfiguration.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DescribeObservabilityConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-describeobservabilityconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-describeservice-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DescribeService API'
+  description: >-
+    The #X Amz Target=AppRunner.DescribeService API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.describeservice.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DescribeService'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-describeservice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-describevpcconnector-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DescribeVpcConnector API'
+  description: >-
+    The #X Amz Target=AppRunner.DescribeVpcConnector API from Amazon App Runner — 1 operation(s) for #x
+    amz target=apprunner.describevpcconnector.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DescribeVpcConnector'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-describevpcconnector-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-describevpcingressconnection-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DescribeVpcIngressConnection API'
+  description: >-
+    The #X Amz Target=AppRunner.DescribeVpcIngressConnection API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.describevpcingressconnection.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DescribeVpcIngressConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-describevpcingressconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-disassociatecustomdomain-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.DisassociateCustomDomain API'
+  description: >-
+    The #X Amz Target=AppRunner.DisassociateCustomDomain API from Amazon App Runner — 1 operation(s) for
+    #x amz target=apprunner.disassociatecustomdomain.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.DisassociateCustomDomain'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-disassociatecustomdomain-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listautoscalingconfigurations-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListAutoScalingConfigurations API'
+  description: >-
+    The #X Amz Target=AppRunner.ListAutoScalingConfigurations API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.listautoscalingconfigurations.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListAutoScalingConfigurations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-listautoscalingconfigurations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listconnections-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListConnections API'
+  description: >-
+    The #X Amz Target=AppRunner.ListConnections API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.listconnections.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListConnections'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-listconnections-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listobservabilityconfigurations-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListObservabilityConfigurations API'
+  description: >-
+    The #X Amz Target=AppRunner.ListObservabilityConfigurations API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.listobservabilityconfigurations.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListObservabilityConfigurations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-listobservabilityconfigurations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listoperations-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListOperations API'
+  description: >-
+    The #X Amz Target=AppRunner.ListOperations API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.listoperations.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListOperations'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-listoperations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listservices-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListServices API'
+  description: >-
+    The #X Amz Target=AppRunner.ListServices API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.listservices.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListServices'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-listservices-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listtagsforresource-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListTagsForResource API'
+  description: >-
+    The #X Amz Target=AppRunner.ListTagsForResource API from Amazon App Runner — 1 operation(s) for #x
+    amz target=apprunner.listtagsforresource.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListTagsForResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-listtagsforresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listvpcconnectors-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListVpcConnectors API'
+  description: >-
+    The #X Amz Target=AppRunner.ListVpcConnectors API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.listvpcconnectors.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListVpcConnectors'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-listvpcconnectors-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-listvpcingressconnections-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ListVpcIngressConnections API'
+  description: >-
+    The #X Amz Target=AppRunner.ListVpcIngressConnections API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.listvpcingressconnections.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ListVpcIngressConnections'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-listvpcingressconnections-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-pauseservice-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.PauseService API'
+  description: >-
+    The #X Amz Target=AppRunner.PauseService API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.pauseservice.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.PauseService'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-pauseservice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-resumeservice-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.ResumeService API'
+  description: >-
+    The #X Amz Target=AppRunner.ResumeService API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.resumeservice.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.ResumeService'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-resumeservice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-startdeployment-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.StartDeployment API'
+  description: >-
+    The #X Amz Target=AppRunner.StartDeployment API from Amazon App Runner — 1 operation(s) for #x amz
+    target=apprunner.startdeployment.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.StartDeployment'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-startdeployment-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-tagresource-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.TagResource API'
+  description: >-
+    The #X Amz Target=AppRunner.TagResource API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.tagresource.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.TagResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-tagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-untagresource-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.UntagResource API'
+  description: >-
+    The #X Amz Target=AppRunner.UntagResource API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.untagresource.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.UntagResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-untagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-updateservice-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.UpdateService API'
+  description: >-
+    The #X Amz Target=AppRunner.UpdateService API from Amazon App Runner — 1 operation(s) for #x amz target=apprunner.updateservice.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.UpdateService'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-runner-x-amz-target-apprunner-updateservice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-app-runner-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-app-runner-conformance.yml
+- aid: >-
+    amazon-app-runner:amazon-app-runner-x-amz-target-apprunner-updatevpcingressconnection-api
+  name: 'Amazon App Runner #X Amz Target=AppRunner.UpdateVpcIngressConnection API'
+  description: >-
+    The #X Amz Target=AppRunner.UpdateVpcIngressConnection API from Amazon App Runner — 1 operation(s)
+    for #x amz target=apprunner.updatevpcingressconnection.
+  humanURL: https://aws.amazon.com/apprunner/
+  baseURL: https://apprunner.amazonaws.com
+  tags:
+  - '#X Amz Target=AppRunner.UpdateVpcIngressConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-app-runner-x-amz-target-apprunner-updatevpcingressconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: Pricing
+    url: https://aws.amazon.com/apprunner/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/apprunner/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/apprunner/faqs/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html
+  - type: API Reference
+    url: https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html
+  - type: CLI Reference
+    url: https://docs.aws.amazon.com/cli/latest/reference/apprunner/
+  - type: Security
+    url: https://docs.aws.amazon.com/apprunner/latest/dg/security.html
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-apprunnerresourcearn-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxconcurrency-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigmaxsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-asconfigminsize-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-runner-associatecustomdomainrequest-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-apprunnerresourcearn-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxconcurrency-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-runner-asconfigmaxsize-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-runner-context.jsonld
   - type: ErrorCatalog
     url: errors/amazon-app-runner-problem-types.yml
   - type: Conformance
