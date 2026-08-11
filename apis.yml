@@ -1852,6 +1852,10 @@ apis:
   - type: Conformance
     url: conformance/amazon-app-runner-conformance.yml
 common:
+- type: MCPServer
+  url: mcp/amazon-app-runner-mcp.yml
+- type: Overlay
+  url: overlays/amazon-app-runner-openapi-overlay.yaml
 - type: AgenticAccess
   url: agentic-access/amazon-app-runner-agentic-access.yml
 - type: VulnerabilityDisclosure
