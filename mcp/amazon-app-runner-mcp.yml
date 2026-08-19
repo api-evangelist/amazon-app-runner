@@ -2,118 +2,122 @@ generated: '2026-06-20'
 method: derived
 status: candidate
 source: openapi/amazon-app-runner-openapi.yaml
-notes: >-
-  No dedicated first-party hosted MCP server for AWS App Runner was found. AWS
-  publishes general-purpose MCP servers under the awslabs/mcp organization (for
-  example the AWS API MCP Server), through which App Runner can be reached, but
-  there is no App-Runner-specific published server. The tools below are a
-  candidate mapping of one MCP tool per App Runner API operation.
+notes: No dedicated first-party hosted MCP server for AWS App Runner was found. AWS publishes general-purpose
+  MCP servers under the awslabs/mcp organization (for example the AWS API MCP Server), through which App
+  Runner can be reached, but there is no App-Runner-specific published server. The tools below are a candidate
+  mapping of one MCP tool per App Runner API operation.
 server:
   name: amazon-app-runner
   transport: http
 tools:
-  - name: associate_custom_domain
-    description: Associate a custom domain with an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#AssociateCustomDomain
-  - name: create_auto_scaling_configuration
-    description: Create an App Runner automatic scaling configuration resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#CreateAutoScalingConfiguration
-  - name: create_connection
-    description: Create an App Runner connection resource for a source code repository provider.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#CreateConnection
-  - name: create_observability_configuration
-    description: Create an App Runner observability configuration resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#CreateObservabilityConfiguration
-  - name: create_service
-    description: Create an App Runner service from a source image or source code repository.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#CreateService
-  - name: create_vpc_connector
-    description: Create an App Runner VPC connector resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#CreateVpcConnector
-  - name: create_vpc_ingress_connection
-    description: Create an App Runner VPC ingress connection resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#CreateVpcIngressConnection
-  - name: delete_auto_scaling_configuration
-    description: Delete an App Runner automatic scaling configuration resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteAutoScalingConfiguration
-  - name: delete_connection
-    description: Delete an App Runner connection resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteConnection
-  - name: delete_observability_configuration
-    description: Delete an App Runner observability configuration resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteObservabilityConfiguration
-  - name: delete_service
-    description: Delete an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteService
-  - name: delete_vpc_connector
-    description: Delete an App Runner VPC connector resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteVpcConnector
-  - name: delete_vpc_ingress_connection
-    description: Delete an App Runner VPC ingress connection resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteVpcIngressConnection
-  - name: describe_auto_scaling_configuration
-    description: Return a full description of an App Runner automatic scaling configuration.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeAutoScalingConfiguration
-  - name: describe_custom_domains
-    description: Return the custom domain names associated with an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeCustomDomains
-  - name: describe_observability_configuration
-    description: Return a full description of an App Runner observability configuration.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeObservabilityConfiguration
-  - name: describe_service
-    description: Return a full description of an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeService
-  - name: describe_vpc_connector
-    description: Return a description of an App Runner VPC connector resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeVpcConnector
-  - name: describe_vpc_ingress_connection
-    description: Return a full description of an App Runner VPC ingress connection resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeVpcIngressConnection
-  - name: disassociate_custom_domain
-    description: Disassociate a custom domain name from an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#DisassociateCustomDomain
-  - name: list_auto_scaling_configurations
-    description: Return a list of App Runner automatic scaling configurations in your account.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListAutoScalingConfigurations
-  - name: list_connections
-    description: Return a list of App Runner connections in your account.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListConnections
-  - name: list_observability_configurations
-    description: Return a list of App Runner observability configurations in your account.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListObservabilityConfigurations
-  - name: list_operations
-    description: Return a list of operations that occurred on an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListOperations
-  - name: list_services
-    description: Return a list of running App Runner services in your account.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListServices
-  - name: list_tags_for_resource
-    description: List tags on an App Runner resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListTagsForResource
-  - name: list_vpc_connectors
-    description: Return a list of App Runner VPC connectors in your account.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListVpcConnectors
-  - name: list_vpc_ingress_connections
-    description: Return a list of App Runner VPC ingress connections in your account.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ListVpcIngressConnections
-  - name: pause_service
-    description: Pause an active App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#PauseService
-  - name: resume_service
-    description: Resume an active App Runner service that was previously paused.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#ResumeService
-  - name: start_deployment
-    description: Initiate a manual deployment of the latest commit or image to an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#StartDeployment
-  - name: tag_resource
-    description: Add tags to, or update the tag values of, an App Runner resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#TagResource
-  - name: untag_resource
-    description: Remove tags from an App Runner resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#UntagResource
-  - name: update_service
-    description: Update an App Runner service.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#UpdateService
-  - name: update_vpc_ingress_connection
-    description: Update an existing App Runner VPC ingress connection resource.
-    source_operation: openapi/amazon-app-runner-openapi.yaml#UpdateVpcIngressConnection
+- name: associate_custom_domain
+  description: Associate a custom domain with an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#AssociateCustomDomain
+- name: create_auto_scaling_configuration
+  description: Create an App Runner automatic scaling configuration resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#CreateAutoScalingConfiguration
+- name: create_connection
+  description: Create an App Runner connection resource for a source code repository provider.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#CreateConnection
+- name: create_observability_configuration
+  description: Create an App Runner observability configuration resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#CreateObservabilityConfiguration
+- name: create_service
+  description: Create an App Runner service from a source image or source code repository.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#CreateService
+- name: create_vpc_connector
+  description: Create an App Runner VPC connector resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#CreateVpcConnector
+- name: create_vpc_ingress_connection
+  description: Create an App Runner VPC ingress connection resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#CreateVpcIngressConnection
+- name: delete_auto_scaling_configuration
+  description: Delete an App Runner automatic scaling configuration resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteAutoScalingConfiguration
+- name: delete_connection
+  description: Delete an App Runner connection resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteConnection
+- name: delete_observability_configuration
+  description: Delete an App Runner observability configuration resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteObservabilityConfiguration
+- name: delete_service
+  description: Delete an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteService
+- name: delete_vpc_connector
+  description: Delete an App Runner VPC connector resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteVpcConnector
+- name: delete_vpc_ingress_connection
+  description: Delete an App Runner VPC ingress connection resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DeleteVpcIngressConnection
+- name: describe_auto_scaling_configuration
+  description: Return a full description of an App Runner automatic scaling configuration.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeAutoScalingConfiguration
+- name: describe_custom_domains
+  description: Return the custom domain names associated with an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeCustomDomains
+- name: describe_observability_configuration
+  description: Return a full description of an App Runner observability configuration.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeObservabilityConfiguration
+- name: describe_service
+  description: Return a full description of an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeService
+- name: describe_vpc_connector
+  description: Return a description of an App Runner VPC connector resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeVpcConnector
+- name: describe_vpc_ingress_connection
+  description: Return a full description of an App Runner VPC ingress connection resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DescribeVpcIngressConnection
+- name: disassociate_custom_domain
+  description: Disassociate a custom domain name from an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#DisassociateCustomDomain
+- name: list_auto_scaling_configurations
+  description: Return a list of App Runner automatic scaling configurations in your account.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListAutoScalingConfigurations
+- name: list_connections
+  description: Return a list of App Runner connections in your account.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListConnections
+- name: list_observability_configurations
+  description: Return a list of App Runner observability configurations in your account.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListObservabilityConfigurations
+- name: list_operations
+  description: Return a list of operations that occurred on an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListOperations
+- name: list_services
+  description: Return a list of running App Runner services in your account.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListServices
+- name: list_tags_for_resource
+  description: List tags on an App Runner resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListTagsForResource
+- name: list_vpc_connectors
+  description: Return a list of App Runner VPC connectors in your account.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListVpcConnectors
+- name: list_vpc_ingress_connections
+  description: Return a list of App Runner VPC ingress connections in your account.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ListVpcIngressConnections
+- name: pause_service
+  description: Pause an active App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#PauseService
+- name: resume_service
+  description: Resume an active App Runner service that was previously paused.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#ResumeService
+- name: start_deployment
+  description: Initiate a manual deployment of the latest commit or image to an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#StartDeployment
+- name: tag_resource
+  description: Add tags to, or update the tag values of, an App Runner resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#TagResource
+- name: untag_resource
+  description: Remove tags from an App Runner resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#UntagResource
+- name: update_service
+  description: Update an App Runner service.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#UpdateService
+- name: update_vpc_ingress_connection
+  description: Update an existing App Runner VPC ingress connection resource.
+  source_operation: openapi/amazon-app-runner-openapi.yaml#UpdateVpcIngressConnection
+deployment:
+  mode: none
+  verified: derived
+  tools: 35
+  checked: '2026-08-12'
+  source: catalog MCP census

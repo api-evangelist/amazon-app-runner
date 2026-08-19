@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS App Runner Amazon App Runner AWS App Runner API API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Amazon App Runner AWS App Runner API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon App Runner Create an App Runner service",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://apprunner.{region}.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an App Runner service from a source code repository or container image."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

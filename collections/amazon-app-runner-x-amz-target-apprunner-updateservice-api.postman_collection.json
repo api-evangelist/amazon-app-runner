@@ -1,0 +1,693 @@
+{
+  "item": [
+    {
+      "id": "43008ad2-5d5f-440c-8fc6-5c36d56b5136",
+      "name": "#X Amz Target=AppRunner.UpdateService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5b3429e4-8d8f-4d8d-a350-144087a2b7f7",
+          "name": "Update Service",
+          "request": {
+            "name": "Update Service",
+            "description": {
+              "content": "<p>Update an App Runner service. You can update the source configuration and instance configuration of the service. You can also update the ARN of the auto scaling configuration resource that's associated with the service. However, you can't change the name or the encryption configuration of the service. These can be set only when you create the service.</p> <p>To update the tags applied to your service, use the separate actions <a>TagResource</a> and <a>UntagResource</a>.</p> <p>This is an asynchronous operation. On a successful call, you can use the returned <code>OperationId</code> and the <a>ListOperations</a> call to track the operation's progress.</p>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=AppRunner.UpdateService",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ServiceArn\": \"<string>\",\n  \"SourceConfiguration\": {\n    \"CodeRepository\": {\n      \"RepositoryUrl\": \"<string>\",\n      \"SourceCodeVersion\": {\n        \"Type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"CodeConfiguration\": {\n        \"ConfigurationSource\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfigurationValues\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ImageRepository\": {\n      \"ImageIdentifier\": \"<string>\",\n      \"ImageRepositoryType\": \"<string>\",\n      \"ImageConfiguration\": {\n        \"RuntimeEnvironmentVariables\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"StartCommand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Port\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"RuntimeEnvironmentSecrets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"AutoDeploymentsEnabled\": \"<boolean>\",\n    \"AuthenticationConfiguration\": {\n      \"ConnectionArn\": \"<string>\",\n      \"AccessRoleArn\": \"<string>\"\n    }\n  },\n  \"InstanceConfiguration\": {\n    \"Cpu\": \"<string>\",\n    \"Memory\": \"<string>\",\n    \"InstanceRoleArn\": \"<string>\"\n  },\n  \"AutoScalingConfigurationArn\": \"<string>\",\n  \"HealthCheckConfiguration\": {\n    \"Protocol\": \"<string>\",\n    \"Path\": \"<string>\",\n    \"Interval\": \"<integer>\",\n    \"Timeout\": \"<integer>\",\n    \"HealthyThreshold\": \"<integer>\",\n    \"UnhealthyThreshold\": \"<integer>\"\n  },\n  \"NetworkConfiguration\": {\n    \"EgressConfiguration\": {\n      \"EgressType\": \"<string>\",\n      \"VpcConnectorArn\": \"<string>\"\n    },\n    \"IngressConfiguration\": {\n      \"IsPubliclyAccessible\": \"<boolean>\"\n    }\n  },\n  \"ObservabilityConfiguration\": {\n    \"ObservabilityEnabled\": \"<boolean>\",\n    \"ObservabilityConfigurationArn\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4ff43c04-4f59-46eb-9fb1-1cd1179bad37",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AppRunner.UpdateService",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ServiceArn\": \"<string>\",\n  \"SourceConfiguration\": {\n    \"CodeRepository\": {\n      \"RepositoryUrl\": \"<string>\",\n      \"SourceCodeVersion\": {\n        \"Type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"CodeConfiguration\": {\n        \"ConfigurationSource\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfigurationValues\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ImageRepository\": {\n      \"ImageIdentifier\": \"<string>\",\n      \"ImageRepositoryType\": \"<string>\",\n      \"ImageConfiguration\": {\n        \"RuntimeEnvironmentVariables\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"StartCommand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Port\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"RuntimeEnvironmentSecrets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"AutoDeploymentsEnabled\": \"<boolean>\",\n    \"AuthenticationConfiguration\": {\n      \"ConnectionArn\": \"<string>\",\n      \"AccessRoleArn\": \"<string>\"\n    }\n  },\n  \"InstanceConfiguration\": {\n    \"Cpu\": \"<string>\",\n    \"Memory\": \"<string>\",\n    \"InstanceRoleArn\": \"<string>\"\n  },\n  \"AutoScalingConfigurationArn\": \"<string>\",\n  \"HealthCheckConfiguration\": {\n    \"Protocol\": \"<string>\",\n    \"Path\": \"<string>\",\n    \"Interval\": \"<integer>\",\n    \"Timeout\": \"<integer>\",\n    \"HealthyThreshold\": \"<integer>\",\n    \"UnhealthyThreshold\": \"<integer>\"\n  },\n  \"NetworkConfiguration\": {\n    \"EgressConfiguration\": {\n      \"EgressType\": \"<string>\",\n      \"VpcConnectorArn\": \"<string>\"\n    },\n    \"IngressConfiguration\": {\n      \"IsPubliclyAccessible\": \"<boolean>\"\n    }\n  },\n  \"ObservabilityConfiguration\": {\n    \"ObservabilityEnabled\": \"<boolean>\",\n    \"ObservabilityConfigurationArn\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Service\": {\n    \"ServiceName\": \"FEh7W8p\",\n    \"ServiceId\": \"7DeD356A-265f-389A-bdCA-b8bEA5Cb\",\n    \"ServiceArn\": \"<string>\",\n    \"CreatedAt\": \"1991-07-18T06:15:12.872Z\",\n    \"UpdatedAt\": \"1980-11-19T08:27:24.124Z\",\n    \"Status\": \"PAUSED\",\n    \"SourceConfiguration\": {\n      \"CodeRepository\": {\n        \"RepositoryUrl\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"SourceCodeVersion\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfiguration\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"ImageRepository\": {\n        \"ImageIdentifier\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ImageRepositoryType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ImageConfiguration\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"AutoDeploymentsEnabled\": \"<boolean>\",\n      \"AuthenticationConfiguration\": {\n        \"ConnectionArn\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"AccessRoleArn\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"InstanceConfiguration\": {\n      \"Cpu\": \"<string>\",\n      \"Memory\": \"<string>\",\n      \"InstanceRoleArn\": \"<string>\"\n    },\n    \"AutoScalingConfigurationSummary\": {\n      \"AutoScalingConfigurationArn\": \"<string>\",\n      \"AutoScalingConfigurationName\": \"1J5qQn9d_LJakLgvg63eezVYWWK\",\n      \"AutoScalingConfigurationRevision\": 8963\n    },\n    \"NetworkConfiguration\": {\n      \"EgressConfiguration\": {\n        \"EgressType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"VpcConnectorArn\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"IngressConfiguration\": {\n        \"IsPubliclyAccessible\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ServiceUrl\": \"<string>\",\n    \"DeletedAt\": \"2011-12-15T04:37:20.072Z\",\n    \"EncryptionConfiguration\": {\n      \"KmsKey\": \"arn:aws:kms:jfrsktfmt-1:162242802877:key/97e3e250-81c8-6f61-0062-437c9ed2ac59\"\n    },\n    \"HealthCheckConfiguration\": {\n      \"Protocol\": \"<string>\",\n      \"Path\": \"<string>\",\n      \"Interval\": \"<integer>\",\n      \"Timeout\": \"<integer>\",\n      \"HealthyThreshold\": \"<integer>\",\n      \"UnhealthyThreshold\": \"<integer>\"\n    },\n    \"ObservabilityConfiguration\": {\n      \"ObservabilityEnabled\": \"<boolean>\",\n      \"ObservabilityConfigurationArn\": \"<string>\"\n    }\n  },\n  \"OperationId\": \"D3fC8D18-e5c8-5C6D-A36a-c0Fafb8aEC09\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ecd3486f-7665-4a10-adee-04ecb414a1ec",
+              "name": "InvalidRequestException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AppRunner.UpdateService",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ServiceArn\": \"<string>\",\n  \"SourceConfiguration\": {\n    \"CodeRepository\": {\n      \"RepositoryUrl\": \"<string>\",\n      \"SourceCodeVersion\": {\n        \"Type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"CodeConfiguration\": {\n        \"ConfigurationSource\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfigurationValues\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ImageRepository\": {\n      \"ImageIdentifier\": \"<string>\",\n      \"ImageRepositoryType\": \"<string>\",\n      \"ImageConfiguration\": {\n        \"RuntimeEnvironmentVariables\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"StartCommand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Port\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"RuntimeEnvironmentSecrets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"AutoDeploymentsEnabled\": \"<boolean>\",\n    \"AuthenticationConfiguration\": {\n      \"ConnectionArn\": \"<string>\",\n      \"AccessRoleArn\": \"<string>\"\n    }\n  },\n  \"InstanceConfiguration\": {\n    \"Cpu\": \"<string>\",\n    \"Memory\": \"<string>\",\n    \"InstanceRoleArn\": \"<string>\"\n  },\n  \"AutoScalingConfigurationArn\": \"<string>\",\n  \"HealthCheckConfiguration\": {\n    \"Protocol\": \"<string>\",\n    \"Path\": \"<string>\",\n    \"Interval\": \"<integer>\",\n    \"Timeout\": \"<integer>\",\n    \"HealthyThreshold\": \"<integer>\",\n    \"UnhealthyThreshold\": \"<integer>\"\n  },\n  \"NetworkConfiguration\": {\n    \"EgressConfiguration\": {\n      \"EgressType\": \"<string>\",\n      \"VpcConnectorArn\": \"<string>\"\n    },\n    \"IngressConfiguration\": {\n      \"IsPubliclyAccessible\": \"<boolean>\"\n    }\n  },\n  \"ObservabilityConfiguration\": {\n    \"ObservabilityEnabled\": \"<boolean>\",\n    \"ObservabilityConfigurationArn\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9f304696-2baa-4d3b-84a1-d1821b8fbfa1",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AppRunner.UpdateService",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ServiceArn\": \"<string>\",\n  \"SourceConfiguration\": {\n    \"CodeRepository\": {\n      \"RepositoryUrl\": \"<string>\",\n      \"SourceCodeVersion\": {\n        \"Type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"CodeConfiguration\": {\n        \"ConfigurationSource\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfigurationValues\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ImageRepository\": {\n      \"ImageIdentifier\": \"<string>\",\n      \"ImageRepositoryType\": \"<string>\",\n      \"ImageConfiguration\": {\n        \"RuntimeEnvironmentVariables\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"StartCommand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Port\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"RuntimeEnvironmentSecrets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"AutoDeploymentsEnabled\": \"<boolean>\",\n    \"AuthenticationConfiguration\": {\n      \"ConnectionArn\": \"<string>\",\n      \"AccessRoleArn\": \"<string>\"\n    }\n  },\n  \"InstanceConfiguration\": {\n    \"Cpu\": \"<string>\",\n    \"Memory\": \"<string>\",\n    \"InstanceRoleArn\": \"<string>\"\n  },\n  \"AutoScalingConfigurationArn\": \"<string>\",\n  \"HealthCheckConfiguration\": {\n    \"Protocol\": \"<string>\",\n    \"Path\": \"<string>\",\n    \"Interval\": \"<integer>\",\n    \"Timeout\": \"<integer>\",\n    \"HealthyThreshold\": \"<integer>\",\n    \"UnhealthyThreshold\": \"<integer>\"\n  },\n  \"NetworkConfiguration\": {\n    \"EgressConfiguration\": {\n      \"EgressType\": \"<string>\",\n      \"VpcConnectorArn\": \"<string>\"\n    },\n    \"IngressConfiguration\": {\n      \"IsPubliclyAccessible\": \"<boolean>\"\n    }\n  },\n  \"ObservabilityConfiguration\": {\n    \"ObservabilityEnabled\": \"<boolean>\",\n    \"ObservabilityConfigurationArn\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d8c1cf2e-fa6a-4c61-aea3-3bad16716691",
+              "name": "InvalidStateException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AppRunner.UpdateService",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ServiceArn\": \"<string>\",\n  \"SourceConfiguration\": {\n    \"CodeRepository\": {\n      \"RepositoryUrl\": \"<string>\",\n      \"SourceCodeVersion\": {\n        \"Type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"CodeConfiguration\": {\n        \"ConfigurationSource\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfigurationValues\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ImageRepository\": {\n      \"ImageIdentifier\": \"<string>\",\n      \"ImageRepositoryType\": \"<string>\",\n      \"ImageConfiguration\": {\n        \"RuntimeEnvironmentVariables\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"StartCommand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Port\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"RuntimeEnvironmentSecrets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"AutoDeploymentsEnabled\": \"<boolean>\",\n    \"AuthenticationConfiguration\": {\n      \"ConnectionArn\": \"<string>\",\n      \"AccessRoleArn\": \"<string>\"\n    }\n  },\n  \"InstanceConfiguration\": {\n    \"Cpu\": \"<string>\",\n    \"Memory\": \"<string>\",\n    \"InstanceRoleArn\": \"<string>\"\n  },\n  \"AutoScalingConfigurationArn\": \"<string>\",\n  \"HealthCheckConfiguration\": {\n    \"Protocol\": \"<string>\",\n    \"Path\": \"<string>\",\n    \"Interval\": \"<integer>\",\n    \"Timeout\": \"<integer>\",\n    \"HealthyThreshold\": \"<integer>\",\n    \"UnhealthyThreshold\": \"<integer>\"\n  },\n  \"NetworkConfiguration\": {\n    \"EgressConfiguration\": {\n      \"EgressType\": \"<string>\",\n      \"VpcConnectorArn\": \"<string>\"\n    },\n    \"IngressConfiguration\": {\n      \"IsPubliclyAccessible\": \"<boolean>\"\n    }\n  },\n  \"ObservabilityConfiguration\": {\n    \"ObservabilityEnabled\": \"<boolean>\",\n    \"ObservabilityConfigurationArn\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "24531abb-f608-421d-bb73-857e4bb0bc8e",
+              "name": "InternalServiceErrorException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AppRunner.UpdateService",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ServiceArn\": \"<string>\",\n  \"SourceConfiguration\": {\n    \"CodeRepository\": {\n      \"RepositoryUrl\": \"<string>\",\n      \"SourceCodeVersion\": {\n        \"Type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"CodeConfiguration\": {\n        \"ConfigurationSource\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"CodeConfigurationValues\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"ImageRepository\": {\n      \"ImageIdentifier\": \"<string>\",\n      \"ImageRepositoryType\": \"<string>\",\n      \"ImageConfiguration\": {\n        \"RuntimeEnvironmentVariables\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"StartCommand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"Port\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"RuntimeEnvironmentSecrets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"AutoDeploymentsEnabled\": \"<boolean>\",\n    \"AuthenticationConfiguration\": {\n      \"ConnectionArn\": \"<string>\",\n      \"AccessRoleArn\": \"<string>\"\n    }\n  },\n  \"InstanceConfiguration\": {\n    \"Cpu\": \"<string>\",\n    \"Memory\": \"<string>\",\n    \"InstanceRoleArn\": \"<string>\"\n  },\n  \"AutoScalingConfigurationArn\": \"<string>\",\n  \"HealthCheckConfiguration\": {\n    \"Protocol\": \"<string>\",\n    \"Path\": \"<string>\",\n    \"Interval\": \"<integer>\",\n    \"Timeout\": \"<integer>\",\n    \"HealthyThreshold\": \"<integer>\",\n    \"UnhealthyThreshold\": \"<integer>\"\n  },\n  \"NetworkConfiguration\": {\n    \"EgressConfiguration\": {\n      \"EgressType\": \"<string>\",\n      \"VpcConnectorArn\": \"<string>\"\n    },\n    \"IngressConfiguration\": {\n      \"IsPubliclyAccessible\": \"<boolean>\"\n    }\n  },\n  \"ObservabilityConfiguration\": {\n    \"ObservabilityEnabled\": \"<boolean>\",\n    \"ObservabilityConfigurationArn\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "http://apprunner.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e49e6fb9-eb1c-47b8-9e2c-dffc3f79be16",
+    "name": "AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.UpdateService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "<fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href=\"https://docs.aws.amazon.com/apprunner/latest/dg/\">App Runner Developer Guide</a>. For release information, see the <a href=\"https://docs.aws.amazon.com/apprunner/latest/relnotes/\">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href=\"http://aws.amazon.com/tools/\">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/apprunner.html\">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+      "type": "text/plain"
+    }
+  }
+}
