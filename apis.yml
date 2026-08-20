@@ -38,7 +38,8 @@ apis:
       runner api.
     humanURL: https://aws.amazon.com/apprunner/
     baseURL: https://apprunner.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - Amazon App Runner AWS App Runner API
     properties:
       - type: OpenAPI
