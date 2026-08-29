@@ -1845,6 +1845,9 @@ apis:
       - type: Conformance
         url: conformance/amazon-app-runner-conformance.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-app-runner-capability-edges.yml
+    name: Amazon App Runner Business Capability Map
   - type: MCPServer
     url: mcp/amazon-app-runner-mcp.yml
   - type: Overlay
