@@ -52,7 +52,7 @@ apis:
     baseURL: https://apprunner.amazonaws.com
     tags: []
     tags_raw:
-      - Amazon App Runner AWS App Runner API
+    - Amazon App Runner AWS App Runner API
     properties:
       - type: OpenAPI
         url: openapi/amazon-app-runner-amazon-app-runner-aws-app-runner-api-api-openapi.yml
