@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.UpdateVpcIngressConnection API'
+  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.UpdateVpcIngressConnection #X Amz Target=AppRunner.UpdateVpcIngressConnection #X Amz Target=AppRunner.UpdateVpcIngressConnection API'
   description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -175,6 +175,80 @@ paths:
       - '#X Amz Target=AppRunner.UpdateVpcIngressConnection'
 components:
   schemas:
+    UpdateVpcIngressConnectionRequest:
+      type: object
+      required:
+      - VpcIngressConnectionArn
+      - IngressVpcConfiguration
+      title: UpdateVpcIngressConnectionRequest
+      properties:
+        VpcIngressConnectionArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (Arn) for the App Runner VPC Ingress Connection resource that you want to update.
+        IngressVpcConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/IngressVpcConfiguration'
+          - description: Specifications for the customer’s Amazon VPC and the related Amazon Web Services PrivateLink VPC endpoint that are used to update the VPC Ingress Connection resource.
+    UpdateVpcIngressConnectionResponse:
+      type: object
+      required:
+      - VpcIngressConnection
+      properties:
+        VpcIngressConnection:
+          allOf:
+          - $ref: '#/components/schemas/VpcIngressConnection'
+          - description: A description of the App Runner VPC Ingress Connection resource that's updated by this request.
+    CustomerAccountId:
+      type: string
+      pattern: '[0-9]{12}'
+      minLength: 12
+      maxLength: 12
+    InternalServiceErrorException: {}
+    ResourceNotFoundException: {}
+    InvalidStateException: {}
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    Timestamp:
+      type: string
+      format: date-time
+    VpcIngressConnectionStatus:
+      type: string
+      enum:
+      - AVAILABLE
+      - PENDING_CREATION
+      - PENDING_UPDATE
+      - PENDING_DELETION
+      - FAILED_CREATION
+      - FAILED_UPDATE
+      - FAILED_DELETION
+      - DELETED
+    IngressVpcConfiguration:
+      type: object
+      properties:
+        VpcId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The ID of the VPC that is used for the VPC endpoint.
+        VpcEndpointId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: 'The ID of the VPC endpoint that your App Runner service connects to. '
+      description: The configuration of your VPC and the associated VPC endpoint. The VPC endpoint is an Amazon Web Services PrivateLink resource that allows access to your App Runner services from within an Amazon VPC.
+    DomainName:
+      type: string
+      pattern: '[A-Za-z0-9*.-]{1,255}'
+      minLength: 1
+      maxLength: 255
+    InvalidRequestException: {}
+    VpcIngressConnectionName:
+      type: string
+      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,39}'
+      minLength: 4
+      maxLength: 40
     String:
       type: string
       pattern: .*
@@ -220,89 +294,9 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: '<p>The time when the App Runner service was deleted. It''s in the Unix time stamp format.</p> <ul> <li> <p> Type: Timestamp </p> </li> <li> <p> Required: No </p> </li> </ul>'
       description: The App Runner resource that specifies an App Runner endpoint for incoming traffic. It establishes a connection between a VPC interface endpoint and a App Runner service, to make your App Runner service accessible from only within an Amazon VPC.
-    VpcIngressConnectionName:
-      type: string
-      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,39}'
-      minLength: 4
-      maxLength: 40
-    IngressVpcConfiguration:
-      type: object
-      properties:
-        VpcId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The ID of the VPC that is used for the VPC endpoint.
-        VpcEndpointId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: 'The ID of the VPC endpoint that your App Runner service connects to. '
-      description: The configuration of your VPC and the associated VPC endpoint. The VPC endpoint is an Amazon Web Services PrivateLink resource that allows access to your App Runner services from within an Amazon VPC.
-    AppRunnerResourceArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
-      minLength: 1
-      maxLength: 1011
-    InternalServiceErrorException: {}
-    InvalidRequestException: {}
-    VpcIngressConnectionStatus:
-      type: string
-      enum:
-      - AVAILABLE
-      - PENDING_CREATION
-      - PENDING_UPDATE
-      - PENDING_DELETION
-      - FAILED_CREATION
-      - FAILED_UPDATE
-      - FAILED_DELETION
-      - DELETED
-    DomainName:
-      type: string
-      pattern: '[A-Za-z0-9*.-]{1,255}'
-      minLength: 1
-      maxLength: 255
-    Timestamp:
-      type: string
-      format: date-time
-    ResourceNotFoundException: {}
-    CustomerAccountId:
-      type: string
-      pattern: '[0-9]{12}'
-      minLength: 12
-      maxLength: 12
-    UpdateVpcIngressConnectionRequest:
-      type: object
-      required:
-      - VpcIngressConnectionArn
-      - IngressVpcConfiguration
-      title: UpdateVpcIngressConnectionRequest
-      properties:
-        VpcIngressConnectionArn:
-          allOf:
-          - $ref: '#/components/schemas/AppRunnerResourceArn'
-          - description: The Amazon Resource Name (Arn) for the App Runner VPC Ingress Connection resource that you want to update.
-        IngressVpcConfiguration:
-          allOf:
-          - $ref: '#/components/schemas/IngressVpcConfiguration'
-          - description: Specifications for the customer’s Amazon VPC and the related Amazon Web Services PrivateLink VPC endpoint that are used to update the VPC Ingress Connection resource.
-    UpdateVpcIngressConnectionResponse:
-      type: object
-      required:
-      - VpcIngressConnection
-      properties:
-        VpcIngressConnection:
-          allOf:
-          - $ref: '#/components/schemas/VpcIngressConnection'
-          - description: A description of the App Runner VPC Ingress Connection resource that's updated by this request.
-    InvalidStateException: {}
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -313,14 +307,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -331,8 +331,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

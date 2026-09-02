@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.AssociateCustomDomain API'
+  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.AssociateCustomDomain #X Amz Target=AppRunner.AssociateCustomDomain #X Amz Target=AppRunner.AssociateCustomDomain API'
   description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -169,45 +169,49 @@ paths:
       - '#X Amz Target=AppRunner.AssociateCustomDomain'
 components:
   schemas:
-    CustomDomain:
+    CertificateValidationRecord:
       type: object
-      required:
-      - DomainName
-      - EnableWWWSubdomain
-      - Status
       properties:
-        DomainName:
+        Name:
           allOf:
-          - $ref: '#/components/schemas/DomainName'
-          - description: An associated custom domain endpoint. It can be a root domain (for example, <code>example.com</code>), a subdomain (for example, <code>login.example.com</code> or <code>admin.login.example.com</code>), or a wildcard (for example, <code>*.example.com</code>).
-        EnableWWWSubdomain:
+          - $ref: '#/components/schemas/String'
+          - description: The certificate CNAME record name.
+        Type:
           allOf:
-          - $ref: '#/components/schemas/NullableBoolean'
-          - description: When <code>true</code>, the subdomain <code>www.<i>DomainName</i> </code> is associated with the App Runner service in addition to the base domain.
-        CertificateValidationRecords:
+          - $ref: '#/components/schemas/String'
+          - description: The record type, always <code>CNAME</code>.
+        Value:
           allOf:
-          - $ref: '#/components/schemas/CertificateValidationRecordList'
-          - description: A list of certificate CNAME records that's used for this domain name.
+          - $ref: '#/components/schemas/String'
+          - description: The certificate CNAME record value.
         Status:
           allOf:
-          - $ref: '#/components/schemas/CustomDomainAssociationStatus'
-          - description: The current state of the domain name association.
-      description: Describes a custom domain that's associated with an App Runner service.
-    String:
+          - $ref: '#/components/schemas/CertificateValidationRecordStatus'
+          - description: The current state of the certificate CNAME record validation. It should change to <code>SUCCESS</code> after App Runner completes validation with your DNS.
+      description: Describes a certificate CNAME record to add to your DNS. For more information, see <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_AssociateCustomDomain.html">AssociateCustomDomain</a>.
+    InternalServiceErrorException: {}
+    CustomDomainAssociationStatus:
       type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 51200
-    VpcDNSTargetList:
-      type: array
-      items:
-        $ref: '#/components/schemas/VpcDNSTarget'
-    CertificateValidationRecordList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CertificateValidationRecord'
-    NullableBoolean:
-      type: boolean
+      enum:
+      - CREATING
+      - CREATE_FAILED
+      - ACTIVE
+      - DELETING
+      - DELETE_FAILED
+      - PENDING_CERTIFICATE_DNS_VALIDATION
+      - BINDING_CERTIFICATE
+    InvalidStateException: {}
+    CertificateValidationRecordStatus:
+      type: string
+      enum:
+      - PENDING_VALIDATION
+      - SUCCESS
+      - FAILED
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
     AssociateCustomDomainResponse:
       type: object
       required:
@@ -232,6 +236,30 @@ components:
           allOf:
           - $ref: '#/components/schemas/VpcDNSTargetList'
           - description: 'DNS Target records for the custom domains of this Amazon VPC. '
+    CustomDomain:
+      type: object
+      required:
+      - DomainName
+      - EnableWWWSubdomain
+      - Status
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/DomainName'
+          - description: An associated custom domain endpoint. It can be a root domain (for example, <code>example.com</code>), a subdomain (for example, <code>login.example.com</code> or <code>admin.login.example.com</code>), or a wildcard (for example, <code>*.example.com</code>).
+        EnableWWWSubdomain:
+          allOf:
+          - $ref: '#/components/schemas/NullableBoolean'
+          - description: When <code>true</code>, the subdomain <code>www.<i>DomainName</i> </code> is associated with the App Runner service in addition to the base domain.
+        CertificateValidationRecords:
+          allOf:
+          - $ref: '#/components/schemas/CertificateValidationRecordList'
+          - description: A list of certificate CNAME records that's used for this domain name.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/CustomDomainAssociationStatus'
+          - description: The current state of the domain name association.
+      description: Describes a custom domain that's associated with an App Runner service.
     VpcDNSTarget:
       type: object
       properties:
@@ -248,48 +276,22 @@ components:
           - $ref: '#/components/schemas/DomainName'
           - description: The domain name of your target DNS that is associated with the Amazon VPC.
       description: DNS Target record for a custom domain of this Amazon VPC.
-    CustomDomainAssociationStatus:
-      type: string
-      enum:
-      - CREATING
-      - CREATE_FAILED
-      - ACTIVE
-      - DELETING
-      - DELETE_FAILED
-      - PENDING_CERTIFICATE_DNS_VALIDATION
-      - BINDING_CERTIFICATE
-    AppRunnerResourceArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
-      minLength: 1
-      maxLength: 1011
-    InternalServiceErrorException: {}
-    CertificateValidationRecord:
-      type: object
-      properties:
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The certificate CNAME record name.
-        Type:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The record type, always <code>CNAME</code>.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The certificate CNAME record value.
-        Status:
-          allOf:
-          - $ref: '#/components/schemas/CertificateValidationRecordStatus'
-          - description: The current state of the certificate CNAME record validation. It should change to <code>SUCCESS</code> after App Runner completes validation with your DNS.
-      description: Describes a certificate CNAME record to add to your DNS. For more information, see <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_AssociateCustomDomain.html">AssociateCustomDomain</a>.
-    InvalidRequestException: {}
+    NullableBoolean:
+      type: boolean
     DomainName:
       type: string
       pattern: '[A-Za-z0-9*.-]{1,255}'
       minLength: 1
       maxLength: 255
+    InvalidRequestException: {}
+    VpcDNSTargetList:
+      type: array
+      items:
+        $ref: '#/components/schemas/VpcDNSTarget'
+    CertificateValidationRecordList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CertificateValidationRecord'
     AssociateCustomDomainRequest:
       type: object
       required:
@@ -309,22 +311,14 @@ components:
           allOf:
           - $ref: '#/components/schemas/NullableBoolean'
           - description: '<p>Set to <code>true</code> to associate the subdomain <code>www.<i>DomainName</i> </code> with the App Runner service in addition to the base domain.</p> <p>Default: <code>true</code> </p>'
-    CertificateValidationRecordStatus:
+    String:
       type: string
-      enum:
-      - PENDING_VALIDATION
-      - SUCCESS
-      - FAILED
-    InvalidStateException: {}
+      pattern: .*
+      minLength: 0
+      maxLength: 51200
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -335,14 +329,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -353,8 +353,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

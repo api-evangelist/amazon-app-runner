@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.CreateAutoScalingConfiguration API'
+  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.CreateAutoScalingConfiguration #X Amz Target=AppRunner.CreateAutoScalingConfiguration #X Amz Target=AppRunner.CreateAutoScalingConfiguration API'
   description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -169,87 +169,6 @@ paths:
       - '#X Amz Target=AppRunner.CreateAutoScalingConfiguration'
 components:
   schemas:
-    ASConfigMaxSize:
-      type: integer
-      minimum: 1
-    Tag:
-      type: object
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag.
-      description: Describes a tag that is applied to an App Runner resource. A tag is a metadata item consisting of a key-value pair.
-    Boolean:
-      type: boolean
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-    AutoScalingConfigurationStatus:
-      type: string
-      enum:
-      - ACTIVE
-      - INACTIVE
-    ServiceQuotaExceededException: {}
-    ASConfigMinSize:
-      type: integer
-      minimum: 1
-      maximum: 25
-    TagKey:
-      type: string
-      pattern: ^(?!aws:).+
-      minLength: 1
-      maxLength: 128
-    CreateAutoScalingConfigurationRequest:
-      type: object
-      required:
-      - AutoScalingConfigurationName
-      title: CreateAutoScalingConfigurationRequest
-      properties:
-        AutoScalingConfigurationName:
-          allOf:
-          - $ref: '#/components/schemas/AutoScalingConfigurationName'
-          - description: <p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note> <p>The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you don't provide a custome one). You can't use it to create a new auto scaling configuration, and you can't create a revision of it.</p> <p>When you want to use your own auto scaling configuration for your App Runner service, <i>create a configuration with a different name</i>, and then provide it when you create or update your service.</p> </note>
-        MaxConcurrency:
-          allOf:
-          - $ref: '#/components/schemas/ASConfigMaxConcurrency'
-          - description: '<p>The maximum number of concurrent requests that you want an instance to process. If the number of concurrent requests exceeds this limit, App Runner scales up your service.</p> <p>Default: <code>100</code> </p>'
-        MinSize:
-          allOf:
-          - $ref: '#/components/schemas/ASConfigMinSize'
-          - description: '<p>The minimum number of instances that App Runner provisions for your service. The service always has at least <code>MinSize</code> provisioned instances. Some of them actively serve traffic. The rest of them (provisioned and inactive instances) are a cost-effective compute capacity reserve and are ready to be quickly activated. You pay for memory usage of all the provisioned instances. You pay for CPU usage of only the active subset.</p> <p>App Runner temporarily doubles the number of provisioned instances during deployments, to maintain the same capacity for both old and new code.</p> <p>Default: <code>1</code> </p>'
-        MaxSize:
-          allOf:
-          - $ref: '#/components/schemas/ASConfigMaxSize'
-          - description: '<p>The maximum number of instances that your service scales up to. At most <code>MaxSize</code> instances actively serve traffic for your service.</p> <p>Default: <code>25</code> </p>'
-        Tags:
-          allOf:
-          - $ref: '#/components/schemas/TagList'
-          - description: A list of metadata items that you can associate with your auto scaling configuration resource. A tag is a key-value pair.
-    CreateAutoScalingConfigurationResponse:
-      type: object
-      required:
-      - AutoScalingConfiguration
-      properties:
-        AutoScalingConfiguration:
-          allOf:
-          - $ref: '#/components/schemas/AutoScalingConfiguration'
-          - description: A description of the App Runner auto scaling configuration that's created by this request.
-    AutoScalingConfigurationName:
-      type: string
-      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,31}'
-      minLength: 4
-      maxLength: 32
-    AppRunnerResourceArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
-      minLength: 1
-      maxLength: 1011
     InternalServiceErrorException: {}
     AutoScalingConfiguration:
       type: object
@@ -295,42 +214,105 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: The time when the auto scaling configuration was deleted. It's in Unix time stamp format.
       description: <p>Describes an App Runner automatic scaling configuration resource.</p> <p>A higher <code>MinSize</code> increases the spread of your App Runner service over more Availability Zones in the Amazon Web Services Region. The tradeoff is a higher minimal cost.</p> <p>A lower <code>MaxSize</code> controls your cost. The tradeoff is lower responsiveness during peak demand.</p> <p>Multiple revisions of a configuration might have the same <code>AutoScalingConfigurationName</code> and different <code>AutoScalingConfigurationRevision</code> values.</p>
-    InvalidRequestException: {}
+    CreateAutoScalingConfigurationRequest:
+      type: object
+      required:
+      - AutoScalingConfigurationName
+      title: CreateAutoScalingConfigurationRequest
+      properties:
+        AutoScalingConfigurationName:
+          allOf:
+          - $ref: '#/components/schemas/AutoScalingConfigurationName'
+          - description: <p>A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note> <p>The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you don't provide a custome one). You can't use it to create a new auto scaling configuration, and you can't create a revision of it.</p> <p>When you want to use your own auto scaling configuration for your App Runner service, <i>create a configuration with a different name</i>, and then provide it when you create or update your service.</p> </note>
+        MaxConcurrency:
+          allOf:
+          - $ref: '#/components/schemas/ASConfigMaxConcurrency'
+          - description: '<p>The maximum number of concurrent requests that you want an instance to process. If the number of concurrent requests exceeds this limit, App Runner scales up your service.</p> <p>Default: <code>100</code> </p>'
+        MinSize:
+          allOf:
+          - $ref: '#/components/schemas/ASConfigMinSize'
+          - description: '<p>The minimum number of instances that App Runner provisions for your service. The service always has at least <code>MinSize</code> provisioned instances. Some of them actively serve traffic. The rest of them (provisioned and inactive instances) are a cost-effective compute capacity reserve and are ready to be quickly activated. You pay for memory usage of all the provisioned instances. You pay for CPU usage of only the active subset.</p> <p>App Runner temporarily doubles the number of provisioned instances during deployments, to maintain the same capacity for both old and new code.</p> <p>Default: <code>1</code> </p>'
+        MaxSize:
+          allOf:
+          - $ref: '#/components/schemas/ASConfigMaxSize'
+          - description: '<p>The maximum number of instances that your service scales up to. At most <code>MaxSize</code> instances actively serve traffic for your service.</p> <p>Default: <code>25</code> </p>'
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: A list of metadata items that you can associate with your auto scaling configuration resource. A tag is a key-value pair.
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    ASConfigMaxConcurrency:
+      type: integer
+      minimum: 1
+      maximum: 200
+    Timestamp:
+      type: string
+      format: date-time
+    ASConfigMinSize:
+      type: integer
+      minimum: 1
+      maximum: 25
+    ServiceQuotaExceededException: {}
+    Tag:
+      type: object
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag.
+      description: Describes a tag that is applied to an App Runner resource. A tag is a metadata item consisting of a key-value pair.
+    TagKey:
+      type: string
+      pattern: ^(?!aws:).+
+      minLength: 1
+      maxLength: 128
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    AutoScalingConfigurationName:
+      type: string
+      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,31}'
+      minLength: 4
+      maxLength: 32
+    AutoScalingConfigurationStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - INACTIVE
     TagValue:
       type: string
       pattern: .*
       minLength: 0
       maxLength: 256
-    ASConfigMaxConcurrency:
+    ASConfigMaxSize:
       type: integer
       minimum: 1
-      maximum: 200
+    InvalidRequestException: {}
+    CreateAutoScalingConfigurationResponse:
+      type: object
+      required:
+      - AutoScalingConfiguration
+      properties:
+        AutoScalingConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/AutoScalingConfiguration'
+          - description: A description of the App Runner auto scaling configuration that's created by this request.
     Integer:
       type: integer
-    Timestamp:
-      type: string
-      format: date-time
+    Boolean:
+      type: boolean
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -341,14 +323,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
