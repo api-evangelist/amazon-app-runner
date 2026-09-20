@@ -1,0 +1,51 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://aws.amazon.com/apprunner/pricing/
+sources:
+- https://aws.amazon.com/apprunner/pricing/
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+published: true
+note: Compute/memory usage-based pricing; automatic deployment monthly fee and build fee mentioned without
+  numeric amounts.
+plan_count: 5
+currency: USD
+plans:
+- name: Provisioned container instances
+  price_text: $0.007 / GB-hour*
+  price: 0.007
+  currency: USD
+  period: per-use
+  unit: GB-hour
+- name: Provisioned container instances (Asia Pacific Tokyo)
+  price_text: pricing is $0.009 / GB-hour
+  price: 0.009
+  currency: USD
+  period: per-use
+  unit: GB-hour
+- name: Active container instances - vCPU
+  price_text: $0.064 / vCPU-hour*
+  price: 0.064
+  currency: USD
+  period: per-use
+  unit: vCPU-hour
+- name: Active container instances - memory
+  price_text: $0.007 / GB-hour*
+  price: 0.007
+  currency: USD
+  period: per-use
+  unit: GB-hour
+- name: Active container instances (Asia Pacific Tokyo)
+  price_text: $0.009 / GB-hour and $0.081 / vCPU-hour
+  currency: USD
+  period: per-use
+  unit: GB-hour and vCPU-hour
+rate_limit_statements:
+- All container instance processing is billed per second, rounded up to the next nearest second. There
+  is a one minute minimum charge for vCPU resources every time a provisioned container instance starts
+  processing requests.

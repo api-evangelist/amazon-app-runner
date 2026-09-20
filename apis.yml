@@ -1810,6 +1810,8 @@ apis:
   - type: Conformance
     url: conformance/amazon-app-runner-conformance.yml
 common:
+- type: Plans
+  url: plans/amazon-app-runner-plans-pricing.yml
 - type: CapabilityMap
   url: capabilities/amazon-app-runner-capability-edges.yml
   name: Amazon App Runner Business Capability Map
