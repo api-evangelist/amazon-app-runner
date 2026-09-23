@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-05-15'
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.DeleteVpcConnector #X Amz Target=AppRunner.DeleteVpcConnector #X Amz Target=AppRunner.DeleteVpcConnector API'
-  description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+  title: 'AWS App Runner #X Amz Target=AppRunner.DeleteVpcConnector…'
+  description: 'App Runner
+
+    App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/apprunner-2020-05-15.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -167,46 +170,15 @@ paths:
           - AppRunner.DeleteVpcConnector
       tags:
       - '#X Amz Target=AppRunner.DeleteVpcConnector'
+      summary: Delete vpc connector
+      x-summary-source: derived
 components:
   schemas:
-    VpcConnectorName:
-      type: string
-      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,39}'
-      minLength: 4
-      maxLength: 40
-    InternalServiceErrorException: {}
-    ResourceNotFoundException: {}
-    StringList:
-      type: array
-      items:
-        $ref: '#/components/schemas/String'
-    DeleteVpcConnectorResponse:
-      type: object
-      required:
-      - VpcConnector
-      properties:
-        VpcConnector:
-          allOf:
-          - $ref: '#/components/schemas/VpcConnector'
-          - description: A description of the App Runner VPC connector that this request just deleted.
     AppRunnerResourceArn:
       type: string
       pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
       minLength: 1
       maxLength: 1011
-    Timestamp:
-      type: string
-      format: date-time
-    DeleteVpcConnectorRequest:
-      type: object
-      required:
-      - VpcConnectorArn
-      title: DeleteVpcConnectorRequest
-      properties:
-        VpcConnectorArn:
-          allOf:
-          - $ref: '#/components/schemas/AppRunnerResourceArn'
-          - description: <p>The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to delete.</p> <p>The ARN must be a full VPC connector ARN.</p>
     VpcConnector:
       type: object
       properties:
@@ -243,28 +215,55 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: The time when the VPC connector was deleted. It's in Unix time stamp format.
       description: <p>Describes an App Runner VPC connector resource. A VPC connector describes the Amazon Virtual Private Cloud (Amazon VPC) that an App Runner service is associated with, and the subnets and security group that are used.</p> <p>Multiple revisions of a connector might have the same <code>Name</code> and different <code>Revision</code> values.</p> <note> <p>At this time, App Runner supports only one revision per name.</p> </note>
-    VpcConnectorStatus:
-      type: string
-      enum:
-      - ACTIVE
-      - INACTIVE
-    InvalidRequestException: {}
-    Integer:
-      type: integer
     String:
       type: string
       pattern: .*
       minLength: 0
       maxLength: 51200
+    Integer:
+      type: integer
+    ResourceNotFoundException: {}
+    Timestamp:
+      type: string
+      format: date-time
+    DeleteVpcConnectorRequest:
+      type: object
+      required:
+      - VpcConnectorArn
+      title: DeleteVpcConnectorRequest
+      properties:
+        VpcConnectorArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: <p>The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to delete.</p> <p>The ARN must be a full VPC connector ARN.</p>
+    InternalServiceErrorException: {}
+    InvalidRequestException: {}
+    DeleteVpcConnectorResponse:
+      type: object
+      required:
+      - VpcConnector
+      properties:
+        VpcConnector:
+          allOf:
+          - $ref: '#/components/schemas/VpcConnector'
+          - description: A description of the App Runner VPC connector that this request just deleted.
+    StringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/String'
+    VpcConnectorStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - INACTIVE
+    VpcConnectorName:
+      type: string
+      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,39}'
+      minLength: 4
+      maxLength: 40
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -275,26 +274,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

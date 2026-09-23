@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-05-15'
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.ListAutoScalingConfigurations #X Amz Target=AppRunner.ListAutoScalingConfigurations #X Amz Target=AppRunner.ListAutoScalingConfigurations API'
-  description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+  title: 'AWS App Runner #X Amz Target=AppRunner.ListAutoScalingConfig…'
+  description: 'App Runner
+
+    App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/apprunner-2020-05-15.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +128,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListAutoScalingConfigurations
-      description: <p>Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can query the revisions for a specific configuration name or the revisions for all active configurations in your account. You can optionally query only the latest revision of each requested name.</p> <p>To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned by <code>ListAutoScalingConfigurations</code>.</p>
+      description: 'Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can query the revisions for a specific configuration name or the revisions for all active configurations in your account. You can optionally query only the latest revision of each requested name.
+
+
+        To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned by ListAutoScalingConfigurations.'
       responses:
         '200':
           description: Success
@@ -173,8 +179,44 @@ paths:
           - AppRunner.ListAutoScalingConfigurations
       tags:
       - '#X Amz Target=AppRunner.ListAutoScalingConfigurations'
+      summary: List auto scaling configurations
+      x-summary-source: derived
 components:
   schemas:
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    AutoScalingConfigurationSummary:
+      type: object
+      properties:
+        AutoScalingConfigurationArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of this auto scaling configuration.
+        AutoScalingConfigurationName:
+          allOf:
+          - $ref: '#/components/schemas/AutoScalingConfigurationName'
+          - description: The customer-provided auto scaling configuration name. It can be used in multiple revisions of a configuration.
+        AutoScalingConfigurationRevision:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'The revision of this auto scaling configuration. It''s unique among all the active configurations (<code>"Status": "ACTIVE"</code>) with the same <code>AutoScalingConfigurationName</code>.'
+      description: <p>Provides summary information about an App Runner automatic scaling configuration resource.</p> <p>This type contains limited information about an auto scaling configuration. It includes only identification information, without configuration details. It's returned by the <a>ListAutoScalingConfigurations</a> action. Complete configuration information is returned by the <a>CreateAutoScalingConfiguration</a>, <a>DescribeAutoScalingConfiguration</a>, and <a>DeleteAutoScalingConfiguration</a> actions using the <a>AutoScalingConfiguration</a> type.</p>
+    Boolean:
+      type: boolean
+    NextToken:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    AutoScalingConfigurationSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AutoScalingConfigurationSummary'
+    Integer:
+      type: integer
     ListAutoScalingConfigurationsRequest:
       type: object
       title: ListAutoScalingConfigurationsRequest
@@ -195,37 +237,13 @@ components:
           allOf:
           - $ref: '#/components/schemas/NextToken'
           - description: <p>A token from a previous result page. It's used for a paginated request. The request retrieves the next result page. All other parameter values must be identical to the ones that are specified in the initial request.</p> <p>If you don't specify <code>NextToken</code>, the request retrieves the first result page.</p>
+    AutoScalingConfigurationName:
+      type: string
+      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,31}'
+      minLength: 4
+      maxLength: 32
     InternalServiceErrorException: {}
-    AutoScalingConfigurationSummary:
-      type: object
-      properties:
-        AutoScalingConfigurationArn:
-          allOf:
-          - $ref: '#/components/schemas/AppRunnerResourceArn'
-          - description: The Amazon Resource Name (ARN) of this auto scaling configuration.
-        AutoScalingConfigurationName:
-          allOf:
-          - $ref: '#/components/schemas/AutoScalingConfigurationName'
-          - description: The customer-provided auto scaling configuration name. It can be used in multiple revisions of a configuration.
-        AutoScalingConfigurationRevision:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: 'The revision of this auto scaling configuration. It''s unique among all the active configurations (<code>"Status": "ACTIVE"</code>) with the same <code>AutoScalingConfigurationName</code>.'
-      description: <p>Provides summary information about an App Runner automatic scaling configuration resource.</p> <p>This type contains limited information about an auto scaling configuration. It includes only identification information, without configuration details. It's returned by the <a>ListAutoScalingConfigurations</a> action. Complete configuration information is returned by the <a>CreateAutoScalingConfiguration</a>, <a>DescribeAutoScalingConfiguration</a>, and <a>DeleteAutoScalingConfiguration</a> actions using the <a>AutoScalingConfiguration</a> type.</p>
-    AutoScalingConfigurationSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AutoScalingConfigurationSummary'
-    AppRunnerResourceArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
-      minLength: 1
-      maxLength: 1011
-    NextToken:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
+    InvalidRequestException: {}
     ListAutoScalingConfigurationsResponse:
       type: object
       required:
@@ -239,29 +257,13 @@ components:
           allOf:
           - $ref: '#/components/schemas/NextToken'
           - description: The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.
-    AutoScalingConfigurationName:
-      type: string
-      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,31}'
-      minLength: 4
-      maxLength: 32
-    InvalidRequestException: {}
     MaxResults:
       type: integer
       minimum: 1
       maximum: 100
-    Integer:
-      type: integer
-    Boolean:
-      type: boolean
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -272,26 +274,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

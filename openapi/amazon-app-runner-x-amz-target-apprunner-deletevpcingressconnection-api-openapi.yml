@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-05-15'
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.DeleteVpcIngressConnection #X Amz Target=AppRunner.DeleteVpcIngressConnection #X Amz Target=AppRunner.DeleteVpcIngressConnection API'
-  description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+  title: 'AWS App Runner #X Amz Target=AppRunner.DeleteVpcIngressConne…'
+  description: 'App Runner
+
+    App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/apprunner-2020-05-15.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +128,19 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: DeleteVpcIngressConnection
-      description: '<p>Delete an App Runner VPC Ingress Connection resource that''s associated with an App Runner service. The VPC Ingress Connection must be in one of the following states to be deleted: </p> <ul> <li> <p> <code>AVAILABLE</code> </p> </li> <li> <p> <code>FAILED_CREATION</code> </p> </li> <li> <p> <code>FAILED_UPDATE</code> </p> </li> <li> <p> <code>FAILED_DELETION</code> </p> </li> </ul>'
+      description: 'Delete an App Runner VPC Ingress Connection resource that''s associated with an App Runner service. The VPC Ingress Connection must be in one of the following states to be deleted:
+
+
+        AVAILABLE
+
+
+        FAILED_CREATION
+
+
+        FAILED_UPDATE
+
+
+        FAILED_DELETION'
       responses:
         '200':
           description: Success
@@ -173,8 +188,24 @@ paths:
           - AppRunner.DeleteVpcIngressConnection
       tags:
       - '#X Amz Target=AppRunner.DeleteVpcIngressConnection'
+      summary: Delete vpc ingress connection
+      x-summary-source: derived
 components:
   schemas:
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    String:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 51200
+    ResourceNotFoundException: {}
+    Timestamp:
+      type: string
+      format: date-time
     DeleteVpcIngressConnectionResponse:
       type: object
       required:
@@ -185,21 +216,23 @@ components:
           - $ref: '#/components/schemas/VpcIngressConnection'
           - description: A description of the App Runner VPC Ingress Connection that this request just deleted.
     InternalServiceErrorException: {}
+    DomainName:
+      type: string
+      pattern: '[A-Za-z0-9*.-]{1,255}'
+      minLength: 1
+      maxLength: 255
+    InvalidRequestException: {}
+    InvalidStateException: {}
     CustomerAccountId:
       type: string
       pattern: '[0-9]{12}'
       minLength: 12
       maxLength: 12
-    ResourceNotFoundException: {}
-    InvalidStateException: {}
-    AppRunnerResourceArn:
+    VpcIngressConnectionName:
       type: string
-      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
-      minLength: 1
-      maxLength: 1011
-    Timestamp:
-      type: string
-      format: date-time
+      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,39}'
+      minLength: 4
+      maxLength: 40
     VpcIngressConnectionStatus:
       type: string
       enum:
@@ -211,44 +244,6 @@ components:
       - FAILED_UPDATE
       - FAILED_DELETION
       - DELETED
-    IngressVpcConfiguration:
-      type: object
-      properties:
-        VpcId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The ID of the VPC that is used for the VPC endpoint.
-        VpcEndpointId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: 'The ID of the VPC endpoint that your App Runner service connects to. '
-      description: The configuration of your VPC and the associated VPC endpoint. The VPC endpoint is an Amazon Web Services PrivateLink resource that allows access to your App Runner services from within an Amazon VPC.
-    DeleteVpcIngressConnectionRequest:
-      type: object
-      required:
-      - VpcIngressConnectionArn
-      title: DeleteVpcIngressConnectionRequest
-      properties:
-        VpcIngressConnectionArn:
-          allOf:
-          - $ref: '#/components/schemas/AppRunnerResourceArn'
-          - description: The Amazon Resource Name (ARN) of the App Runner VPC Ingress Connection that you want to delete.
-    DomainName:
-      type: string
-      pattern: '[A-Za-z0-9*.-]{1,255}'
-      minLength: 1
-      maxLength: 255
-    InvalidRequestException: {}
-    VpcIngressConnectionName:
-      type: string
-      pattern: '[A-Za-z0-9][A-Za-z0-9\-_]{3,39}'
-      minLength: 4
-      maxLength: 40
-    String:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 51200
     VpcIngressConnection:
       type: object
       properties:
@@ -289,15 +284,31 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: '<p>The time when the App Runner service was deleted. It''s in the Unix time stamp format.</p> <ul> <li> <p> Type: Timestamp </p> </li> <li> <p> Required: No </p> </li> </ul>'
       description: The App Runner resource that specifies an App Runner endpoint for incoming traffic. It establishes a connection between a VPC interface endpoint and a App Runner service, to make your App Runner service accessible from only within an Amazon VPC.
+    IngressVpcConfiguration:
+      type: object
+      properties:
+        VpcId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The ID of the VPC that is used for the VPC endpoint.
+        VpcEndpointId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: 'The ID of the VPC endpoint that your App Runner service connects to. '
+      description: The configuration of your VPC and the associated VPC endpoint. The VPC endpoint is an Amazon Web Services PrivateLink resource that allows access to your App Runner services from within an Amazon VPC.
+    DeleteVpcIngressConnectionRequest:
+      type: object
+      required:
+      - VpcIngressConnectionArn
+      title: DeleteVpcIngressConnectionRequest
+      properties:
+        VpcIngressConnectionArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner VPC Ingress Connection that you want to delete.
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -308,26 +319,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

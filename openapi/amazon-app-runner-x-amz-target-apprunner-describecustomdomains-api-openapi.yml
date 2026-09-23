@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-05-15'
   x-release: v4
-  title: 'AWS App Runner Amazon App Runner AWS App Runner API #X Amz Target=AppRunner.DescribeCustomDomains #X Amz Target=AppRunner.DescribeCustomDomains #X Amz Target=AppRunner.DescribeCustomDomains API'
-  description: <fullname>App Runner</fullname> <p>App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web Services resources.</p> <p>App Runner connects directly to your container registry or source code repository. It provides an automatic delivery pipeline with fully managed operations, high performance, scalability, and security.</p> <p>For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner Developer Guide</a>. For release information, see the <a href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release Notes</a>.</p> <p> To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that you can use to access the API, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of Region-specific endpoints that App Runner supports, see <a href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+  title: 'AWS App Runner #X Amz Target=AppRunner.DescribeCustomDomains…'
+  description: 'App Runner
+
+    App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -24,6 +26,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/apprunner-2020-05-15.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -179,8 +182,14 @@ paths:
           - AppRunner.DescribeCustomDomains
       tags:
       - '#X Amz Target=AppRunner.DescribeCustomDomains'
+      summary: Describe custom domains
+      x-summary-source: derived
 components:
   schemas:
+    CustomDomainList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomDomain'
     CertificateValidationRecord:
       type: object
       properties:
@@ -201,7 +210,19 @@ components:
           - $ref: '#/components/schemas/CertificateValidationRecordStatus'
           - description: The current state of the certificate CNAME record validation. It should change to <code>SUCCESS</code> after App Runner completes validation with your DNS.
       description: Describes a certificate CNAME record to add to your DNS. For more information, see <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_AssociateCustomDomain.html">AssociateCustomDomain</a>.
-    InternalServiceErrorException: {}
+    AppRunnerResourceArn:
+      type: string
+      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
+      minLength: 1
+      maxLength: 1011
+    VpcDNSTargetList:
+      type: array
+      items:
+        $ref: '#/components/schemas/VpcDNSTarget'
+    DescribeCustomDomainsMaxResults:
+      type: integer
+      minimum: 1
+      maximum: 5
     DescribeCustomDomainsResponse:
       type: object
       required:
@@ -230,6 +251,29 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.
+    String:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 51200
+    DescribeCustomDomainsRequest:
+      type: object
+      required:
+      - ServiceArn
+      title: DescribeCustomDomainsRequest
+      properties:
+        ServiceArn:
+          allOf:
+          - $ref: '#/components/schemas/AppRunnerResourceArn'
+          - description: The Amazon Resource Name (ARN) of the App Runner service that you want associated custom domain names to be described for.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: <p>A token from a previous result page. It's used for a paginated request. The request retrieves the next result page. All other parameter values must be identical to the ones that are specified in the initial request.</p> <p>If you don't specify <code>NextToken</code>, the request retrieves the first result page.</p>
+        MaxResults:
+          allOf:
+          - $ref: '#/components/schemas/DescribeCustomDomainsMaxResults'
+          - description: <p>The maximum number of results that each response (result page) can include. It's used for a paginated request.</p> <p>If you don't specify <code>MaxResults</code>, the request retrieves all available results in a single response.</p>
     ResourceNotFoundException: {}
     CustomDomainAssociationStatus:
       type: string
@@ -241,21 +285,6 @@ components:
       - DELETE_FAILED
       - PENDING_CERTIFICATE_DNS_VALIDATION
       - BINDING_CERTIFICATE
-    CustomDomainList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomDomain'
-    CertificateValidationRecordStatus:
-      type: string
-      enum:
-      - PENDING_VALIDATION
-      - SUCCESS
-      - FAILED
-    AppRunnerResourceArn:
-      type: string
-      pattern: arn:aws(-[\w]+)*:[a-z0-9-\\.]{0,63}:[a-z0-9-\\.]{0,63}:[0-9]{12}:(\w|\/|-){1,1011}
-      minLength: 1
-      maxLength: 1011
     CustomDomain:
       type: object
       required:
@@ -280,10 +309,12 @@ components:
           - $ref: '#/components/schemas/CustomDomainAssociationStatus'
           - description: The current state of the domain name association.
       description: Describes a custom domain that's associated with an App Runner service.
-    DescribeCustomDomainsMaxResults:
-      type: integer
-      minimum: 1
-      maximum: 5
+    NullableBoolean:
+      type: boolean
+    CertificateValidationRecordList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CertificateValidationRecord'
     VpcDNSTarget:
       type: object
       properties:
@@ -300,54 +331,22 @@ components:
           - $ref: '#/components/schemas/DomainName'
           - description: The domain name of your target DNS that is associated with the Amazon VPC.
       description: DNS Target record for a custom domain of this Amazon VPC.
-    NullableBoolean:
-      type: boolean
+    InternalServiceErrorException: {}
     DomainName:
       type: string
       pattern: '[A-Za-z0-9*.-]{1,255}'
       minLength: 1
       maxLength: 255
     InvalidRequestException: {}
-    VpcDNSTargetList:
-      type: array
-      items:
-        $ref: '#/components/schemas/VpcDNSTarget'
-    CertificateValidationRecordList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CertificateValidationRecord'
-    DescribeCustomDomainsRequest:
-      type: object
-      required:
-      - ServiceArn
-      title: DescribeCustomDomainsRequest
-      properties:
-        ServiceArn:
-          allOf:
-          - $ref: '#/components/schemas/AppRunnerResourceArn'
-          - description: The Amazon Resource Name (ARN) of the App Runner service that you want associated custom domain names to be described for.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: <p>A token from a previous result page. It's used for a paginated request. The request retrieves the next result page. All other parameter values must be identical to the ones that are specified in the initial request.</p> <p>If you don't specify <code>NextToken</code>, the request retrieves the first result page.</p>
-        MaxResults:
-          allOf:
-          - $ref: '#/components/schemas/DescribeCustomDomainsMaxResults'
-          - description: <p>The maximum number of results that each response (result page) can include. It's used for a paginated request.</p> <p>If you don't specify <code>MaxResults</code>, the request retrieves all available results in a single response.</p>
-    String:
+    CertificateValidationRecordStatus:
       type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 51200
+      enum:
+      - PENDING_VALIDATION
+      - SUCCESS
+      - FAILED
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -358,26 +357,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
